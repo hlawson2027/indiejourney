@@ -1,0 +1,156 @@
+---
+import '@fontsource/playfair-display/400.css';
+import '@fontsource/playfair-display/400-italic.css';
+import '@fontsource/jost/400.css';
+import '@fontsource/jost/500.css';
+import '@fontsource/jost/600.css';
+import '../styles/global.css';
+import { settings } from '../lib/settings';
+import { shareImage } from '../lib/images';
+import { IS_PREVIEW } from '../lib/content';
+
+interface Props {
+  title?: string;
+  description?: string | null;
+  image?: string | null;
+  type?: 'website' | 'article';
+  published?: Date;
+  modified?: Date;
+  jsonld?: Record<string, unknown>;
+  noindex?: boolean;
+}
+const { title, description, image, type = 'website', published, modified, jsonld, noindex = false } = Astro.props;
+const fullTitle = title ? `${title} | ${settings.title}` : `${settings.title} | ${settings.tagline}`;
+const desc = description || settings.description;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const imgPath = (await shareImage(image)) || (await shareImage(settings.share_image));
+const ogImage = imgPath ? new URL(imgPath, Astro.site).href : undefined;
+const path = Astro.url.pathname;
+const isCurrent = (url: string) => url !== '/' && path.startsWith(url);
+const social = settings.social.filter((s) => s.url);
+const siteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: settings.title,
+  url: Astro.site?.href,
+  potentialAction: { '@type': 'SearchAction', target: `${Astro.site?.href}search/?q={q}`, 'query-input': 'required name=q' },
+};
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={desc} />
+  <link rel="canonical" href={canonical} />
+  {(noindex || IS_PREVIEW) && <meta name="robots" content="noindex, nofollow" />}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" type="application/rss+xml" title={settings.title} href="/rss.xml" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:site_name" content={settings.title} />
+  <meta property="og:type" content={type} />
+  <meta property="og:title" content={title || settings.title} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:url" content={canonical} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  {published && <meta property="article:published_time" content={published.toISOString()} />}
+  {modified && <meta property="article:modified_time" content={modified.toISOString()} />}
+  <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+  {settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
+  {settings.pinterest_domain_verify && <meta name="p:domain_verify" content={settings.pinterest_domain_verify} />}
+  <script type="application/ld+json" set:html={JSON.stringify(jsonld || siteLd)} />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="wrap">
+      <nav aria-label="Social">{social.map((s) => <a href={s.url} rel="me noopener" target="_blank">{s.label}</a>)}</nav>
+      <nav aria-label="Utility"><a href="/#newsletter">Newsletter</a><a href="/search/">Search</a></nav>
+    </div>
+  </div>
+  <header class="masthead">
+    <a class="logo" href="/">{settings.title}</a>
+    <p class="tagline">{settings.tagline}</p>
+  </header>
+  <nav class="mainnav" aria-label="Main">
+    <ul>{settings.nav.map((n) => <li><a href={n.url} aria-current={isCurrent(n.url) ? 'page' : undefined}>{n.label}</a></li>)}</ul>
+  </nav>
+
+  <div class="mobilebar">
+    <button class="iconbtn" type="button" aria-label="Open menu" data-open-menu>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+    </button>
+    <a class="logo" href="/">{settings.title}</a>
+    <a class="iconbtn" href="/search/" aria-label="Search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
+    </a>
+  </div>
+  <nav class="chips" aria-label="Sections">{settings.nav.map((n) => <a href={n.url} aria-current={isCurrent(n.url) ? 'page' : undefined}>{n.label}</a>)}</nav>
+  <dialog class="drawer" id="menu" aria-label="Menu">
+    <div class="drawer-inner">
+      <button class="iconbtn" type="button" aria-label="Close menu" data-close-menu>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg>
+      </button>
+      <ul>{settings.nav.map((n) => <li><a href={n.url}>{n.label}</a></li>)}</ul>
+      <div class="social">{social.map((s) => <a href={s.url} rel="me noopener" target="_blank">{s.label}</a>)}</div>
+    </div>
+  </dialog>
+
+  <main id="main" data-pagefind-body>
+    <slot />
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div><p class="flogo">{settings.title}</p></div>
+      {settings.footer_columns.map((col) => (
+        <div>
+          <span class="kick">{col.heading}</span>
+          <ul>{col.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}</ul>
+        </div>
+      ))}
+      {social.length > 0 && (
+        <div>
+          <span class="kick">Follow</span>
+          <ul>{social.map((s) => <li><a href={s.url} rel="me noopener" target="_blank">{s.label}</a></li>)}</ul>
+        </div>
+      )}
+    </div>
+    <p class="wrap footer-legal">{settings.disclosures.amazon} Some links on this site are affiliate links. © {new Date().getFullYear()} {settings.title}.</p>
+  </footer>
+
+  {IS_PREVIEW && <div class="preview-flag">Preview: drafts visible</div>}
+
+  <script>
+    const menu = document.getElementById('menu') as HTMLDialogElement | null;
+    document.querySelector('[data-open-menu]')?.addEventListener('click', () => menu?.showModal());
+    document.querySelector('[data-close-menu]')?.addEventListener('click', () => menu?.close());
+    menu?.addEventListener('click', (e) => { if (e.target === menu) menu.close(); });
+    // Click-to-play YouTube: loads the video player only when tapped.
+    document.querySelectorAll<HTMLElement>('.yt[data-yt]').forEach((el) => {
+      el.querySelector('button')?.addEventListener('click', () => {
+        const f = document.createElement('iframe');
+        f.src = `https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0`;
+        f.title = 'YouTube video';
+        f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+        f.allowFullscreen = true;
+        el.replaceChildren(f);
+      });
+    });
+    document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((b) =>
+      b.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(b.dataset.copy || location.href); b.textContent = 'Link copied'; } catch {}
+      })
+    );
+  </script>
+  {settings.pinterest_save_button && !IS_PREVIEW && (
+    <script is:inline async defer src="https://assets.pinterest.com/js/pinit.js" data-pin-hover="true" data-pin-tall="true"></script>
+  )}
+  {settings.analytics_token && !IS_PREVIEW && (
+    <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: settings.analytics_token })}></script>
+  )}
+</body>
+</html>

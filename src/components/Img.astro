@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import { resolveImage } from '../lib/images';
+
+interface Props {
+  src?: string | null;
+  alt?: string | null;
+  ratio?: '45' | '34' | '32' | '11' | '23';
+  widths?: number[];
+  sizes?: string;
+  eager?: boolean;
+  tint?: string;
+  class?: string;
+  pinMedia?: string;
+  pinDescription?: string;
+  seed?: string;
+}
+const {
+  src,
+  alt = '',
+  ratio = '32',
+  widths = [320, 480, 720, 960, 1280],
+  sizes = '(max-width: 760px) 100vw, 33vw',
+  eager = false,
+  tint,
+  class: cls = '',
+  pinDescription,
+  seed: seedText,
+} = Astro.props;
+const meta = resolveImage(src);
+const tints = ['#E9DCCB', '#D8DDD3', '#E4CDB5', '#CFD6DA', '#E2D6C6', '#D7CFC4', '#D9C3AE', '#DCD3C7'];
+const seed = (seedText || alt || src || '').split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+const bg = tint || tints[seed % tints.length];
+const usable = meta ? widths.filter((w) => w <= meta.width) : [];
+if (meta && usable.length === 0) usable.push(meta.width);
+---
+<span class={`media r-${ratio} ${cls}`}>
+  {meta ? (
+    <Image
+      src={meta}
+      alt={alt || ''}
+      widths={usable}
+      sizes={sizes}
+      loading={eager ? 'eager' : 'lazy'}
+      fetchpriority={eager ? 'high' : 'auto'}
+      decoding="async"
+      format="webp"
+      quality={78}
+      data-pin-description={pinDescription}
+    />
+  ) : (
+    <span class="ph" style={`background:${bg}`} role={alt ? 'img' : undefined} aria-label={alt || undefined}></span>
+  )}
+</span>

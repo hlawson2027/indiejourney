@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from './ProductCard.astro';
+import { settings } from '../lib/settings';
+import { getProducts, retailerSlug } from '../lib/content';
+
+interface Props { retailer?: string; }
+const { retailer } = Astro.props;
+const all = await getProducts();
+const retailers = [...new Set(all.map((p) => p.data.retailer))].sort();
+const items = (retailer ? all.filter((p) => p.data.retailer === retailer) : all).sort(
+  (a, b) => Number(b.data.featured) - Number(a.data.featured)
+);
+const title = retailer ? `${retailer} Finds` : 'Shop My Finds';
+const path = Astro.url.pathname;
+---
+<Base title={title} description={`${title}: the products I actually use and recommend, from home to running.`}>
+  <div class="wrap">
+    <header class="pagehead">
+      <span class="kick">Shop</span>
+      <h1 class="hed" style="margin-top:10px">{title}</h1>
+      <p class="dek">The things I actually use, love and buy again.</p>
+    </header>
+    <nav class="filters" aria-label="Shop by store" style="justify-content:center;margin-bottom:32px">
+      <a href="/shop/" aria-current={path === '/shop/' ? 'page' : undefined}>All</a>
+      {retailers.map((r) => <a href={`/shop/${retailerSlug(r)}/`} aria-current={path === `/shop/${retailerSlug(r)}/` ? 'page' : undefined}>{r}</a>)}
+      <a href="/stores/">My Stores</a>
+    </nav>
+    <p class="disclosure-top" style="text-align:center">{settings.disclosures.affiliate} {retailer === 'Amazon' ? settings.disclosures.amazon : ''}</p>
+    {items.length ? <div class="products">{items.map((p) => <ProductCard product={p} />)}</div> : <p class="empty">New finds coming soon.</p>}
+  </div>
+</Base>

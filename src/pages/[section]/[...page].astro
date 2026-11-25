@@ -1,0 +1,70 @@
+---
+// One route serves both category pages (/spain-diaries/, /spain-diaries/2/)
+// and simple pages such as /about/, so new ones appear without new code.
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { getArticles, getCategories } from '../../lib/content';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const RESERVED = ['stories', 'lookbooks', 'shop', 'books', 'stores', 'search', 'uploads', '_astro', 'pagefind', 'rss.xml'];
+  const articles = await getArticles();
+  const categories = await getCategories();
+  const pages = await getCollection('pages');
+  const seen = new Set<string>();
+  const claim = (id: string, what: string) => {
+    if (RESERVED.includes(id) || seen.has(id)) throw new Error(`The ${what} "${id}" uses a web address that is already taken. Rename it in the dashboard.`);
+    seen.add(id);
+  };
+  const out: any[] = [];
+  for (const c of categories) {
+    claim(c.id, 'category');
+    const items = articles.filter((a) => a.data.category === c.id);
+    out.push(...paginate(items, { params: { section: c.id }, props: { kind: 'category', category: c }, pageSize: 24 }));
+  }
+  for (const p of pages) {
+    claim(p.id, 'page');
+    out.push({ params: { section: p.id, page: undefined }, props: { kind: 'page', entry: p } });
+  }
+  return out;
+}) satisfies GetStaticPaths;
+
+const props = Astro.props as any;
+let Content: any = null;
+if (props.kind === 'page') Content = (await render(props.entry)).Content;
+---
+{props.kind === 'category' ? (
+  <Base title={props.category.data.title} description={props.category.data.description}>
+    <div class="wrap">
+      <header class="pagehead">
+        <h1 class="hed">{props.category.data.title}</h1>
+        {props.category.data.description && <p class="dek">{props.category.data.description}</p>}
+      </header>
+      {props.page.data.length ? (
+        <div class="grid wide">
+          {props.page.data.map((a: any) => <ArticleCard article={a} kicker={props.category.data.title} showExcerpt sizes="(max-width: 760px) 100vw, 380px" />)}
+        </div>
+      ) : (
+        <p class="empty">Stories are on their way.</p>
+      )}
+      {(props.page.url.prev || props.page.url.next) && (
+        <nav class="share" aria-label="More pages" style="margin-top:48px">
+          {props.page.url.prev && <a href={props.page.url.prev}>← Newer</a>}
+          {props.page.url.next && <a href={props.page.url.next}>Older →</a>}
+        </nav>
+      )}
+      <Newsletter />
+    </div>
+  </Base>
+) : (
+  <Base title={props.entry.data.seo?.title || props.entry.data.title} description={props.entry.data.seo?.description}>
+    <div class="wrap">
+      <header class="pagehead"><h1 class="hed">{props.entry.data.title}</h1></header>
+      {props.entry.data.image && <div style="max-width:760px;margin:0 auto"><Img src={props.entry.data.image} alt="" ratio="32" eager sizes="(max-width: 760px) 100vw, 760px" /></div>}
+      <div class="prose"><Content /></div>
+    </div>
+  </Base>
+)}

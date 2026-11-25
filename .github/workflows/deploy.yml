@@ -1,0 +1,63 @@
+name: Publish website
+
+on:
+  # Every save in the dashboard
+  push:
+    branches: [main]
+  # Every morning (about 5:15 a.m. New York time), so scheduled posts appear on their date
+  schedule:
+    - cron: "15 10 * * *"
+  # The "Publish site now" button in the dashboard, or Run workflow on GitHub
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: Pages CMS payload (filled in automatically)
+        required: false
+        type: string
+
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+jobs:
+  public:
+    name: Public site
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://myindiejourney.com' }}
+      - name: Deploy to Cloudflare
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+  preview:
+    name: Private preview site (shows drafts)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build with drafts
+        run: npm run build:preview
+        env:
+          SITE_URL: ${{ vars.PREVIEW_URL || 'https://preview.myindiejourney.com' }}
+      - name: Deploy preview
+        run: npx wrangler deploy --name indiejourney-preview
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

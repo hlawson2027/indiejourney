@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import { getLookbooks, lookbookUrl } from '../../lib/content';
+const lookbooks = await getLookbooks();
+---
+<Base title="Lookbooks" description="Shoppable interior design lookbooks: every piece in the room, numbered and linked.">
+  <div class="wrap">
+    <header class="pagehead">
+      <span class="kick">Home &amp; Living</span>
+      <h1 class="hed" style="margin-top:10px">Lookbooks</h1>
+      <p class="dek">Real rooms, every piece numbered and linked.</p>
+    </header>
+    {lookbooks.length ? (
+      <div class="grid wide">
+        {lookbooks.map((l) => (
+          <article class="card">
+            <a href={lookbookUrl(l)} tabindex="-1" aria-hidden="true"><Img src={l.data.room_photo} alt={l.data.room_photo_alt || ''} ratio="45" sizes="(max-width: 760px) 100vw, 380px" /></a>
+            <span class="kick">Lookbook</span>
+            <h2 class="hed" style="font-size:22px;margin-top:6px"><a href={lookbookUrl(l)}>{l.data.title}</a></h2>
+            {l.data.excerpt && <p class="dek">{l.data.excerpt}</p>}
+          </article>
+        ))}
+      </div>
+    ) : <p class="empty">The first lookbook is coming soon.</p>}
+  </div>
+</Base>

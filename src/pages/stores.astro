@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Img from '../components/Img.astro';
+import { getStores } from '../lib/content';
+const stores = await getStores();
+const groups = [...new Set(stores.map((s) => s.data.kind || 'Store'))];
+---
+<Base title="My Stores & Businesses" description="The stores and businesses I run.">
+  <div class="wrap">
+    <header class="pagehead">
+      <h1 class="hed">My Stores &amp; Businesses</h1>
+      <p class="dek">Everything I make and run, in one place.</p>
+    </header>
+    {groups.map((g) => (
+      <section class="section" style="margin-top:0;margin-bottom:56px">
+        <div class="sec"><h2>{g === 'Store' ? 'Stores' : g === 'Business' ? 'Businesses' : g}</h2><span class="rule"></span></div>
+        <div class="grid">
+          {stores.filter((s) => (s.data.kind || 'Store') === g).map((s) => (
+            <a class="card storecard" href={s.data.url} target="_blank" rel="noopener">
+              <Img src={s.data.image} alt={s.data.name} ratio="32" sizes="(max-width: 760px) 100vw, 290px" />
+              <span class="hed" style="font-size:22px">{s.data.name}</span>
+              {s.data.tagline && <span class="dek" style="margin:0">{s.data.tagline}</span>}
+              <span class="kick dark">Visit →</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Base>

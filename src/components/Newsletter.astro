@@ -1,0 +1,19 @@
+---
+import { settings } from '../lib/settings';
+const n = settings.newsletter;
+const id = 'nl-' + Math.random().toString(36).slice(2, 7);
+---
+<section class="newsletter section" id="newsletter" aria-labelledby={`${id}-h`}>
+  {n.kicker && <span class="kick">{n.kicker}</span>}
+  <h2 class="hed" id={`${id}-h`}>{n.heading}</h2>
+  {n.text && <p class="dek">{n.text}</p>}
+  {n.form_action ? (
+    <form action={n.form_action} method="post" target="_blank">
+      <label for={`${id}-e`} class="sr-only">Email address</label>
+      <input id={`${id}-e`} type="email" name={n.email_field || 'email_address'} placeholder="Your email address" required autocomplete="email" />
+      <button class="btn solid" type="submit">Subscribe</button>
+    </form>
+  ) : (
+    <p class="note">Newsletter sign-up opens soon.</p>
+  )}
+</section>

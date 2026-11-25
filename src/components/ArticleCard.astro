@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Img from './Img.astro';
+import { articleUrl } from '../lib/content';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  kicker?: string;
+  variant?: 'stack' | 'row';
+  ratio?: '45' | '34' | '32' | '11';
+  sizes?: string;
+  showExcerpt?: boolean;
+}
+const { article, kicker, variant = 'stack', ratio = '34', sizes, showExcerpt = false } = Astro.props;
+const d = article.data;
+const url = articleUrl(article);
+---
+{variant === 'row' ? (
+  <article class="rowcard">
+    <a href={url} tabindex="-1" aria-hidden="true"><Img src={d.cover} alt={d.cover_alt || ''} seed={d.title} ratio="32" widths={[240, 320]} sizes="150px" /></a>
+    <div>
+      {kicker && <span class="kick">{kicker}</span>}
+      <h3 class="hed"><a href={url}>{d.title}</a></h3>
+    </div>
+  </article>
+) : (
+  <article class="card">
+    <a href={url} tabindex="-1" aria-hidden="true"><Img src={d.cover} alt={d.cover_alt || ''} seed={d.title} ratio={ratio} sizes={sizes} /></a>
+    {kicker && <span class="kick">{kicker}</span>}
+    <h3 class="hed"><a href={url}>{d.title}</a></h3>
+    {showExcerpt && d.excerpt && <p class="dek">{d.excerpt}</p>}
+  </article>
+)}

@@ -1,0 +1,608 @@
+# The Indie Journey — owner dashboard (Pages CMS)
+# Everything below defines the forms you see at app.pagescms.org.
+
+media:
+  input: src/assets/uploads
+  output: /uploads
+  rename: safe
+  categories: [image]
+
+components:
+  seo:
+    type: object
+    label: Google & sharing (optional)
+    description: Leave blank to use the title and summary.
+    fields:
+      - name: title
+        label: Title shown in Google
+        type: string
+      - name: description
+        label: Description shown in Google
+        type: text
+
+content:
+  - name: articles
+    label: Stories
+    type: collection
+    path: src/content/articles
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, category, date, draft]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    actions:
+      - name: publish-now
+        label: Publish site now
+        workflow: deploy.yml
+        confirm:
+          title: Publish now?
+          message: Rebuilds the website so your latest saved changes go live in about two minutes.
+          button: Publish
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: draft
+        label: Draft (hidden from the public site)
+        type: boolean
+        default: true
+        description: Untick when you are ready to publish. Drafts still show on your private preview site.
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+        description: Pick a future date to schedule it. The site rebuilds every morning and it appears that day.
+      - name: category
+        label: Category
+        type: reference
+        required: true
+        options:
+          collection: categories
+          value: "{path}"
+          label: "{title}"
+      - name: excerpt
+        label: Summary
+        type: text
+        description: One or two sentences shown under the title and in Google.
+      - name: cover
+        label: Cover photo
+        type: image
+      - name: cover_alt
+        label: Cover photo description
+        type: string
+        description: A few words describing the photo, for screen readers and Google.
+      - name: body
+        label: Story
+        type: rich-text
+        options:
+          format: markdown
+        description: "To add a product card, type [[product: Product name]] on its own line (the name as saved in Products). To add a video, paste a YouTube link on its own line."
+      - name: products
+        label: Shop this post (product cards at the end)
+        type: reference
+        options:
+          collection: products
+          multiple: true
+          value: "{path}"
+          label: "{name} · {retailer}"
+          search: "name,retailer"
+      - name: video
+        label: Featured YouTube video (optional)
+        type: string
+        description: Paste a YouTube link to show the video at the top of the story.
+      - name: pin_image
+        label: Pinterest image (optional, tall 2:3)
+        type: image
+        description: Used when someone pins this story. If empty, the cover photo is used.
+      - name: featured
+        label: Use as homepage lead if no lead is chosen
+        type: boolean
+        default: false
+      - name: updated
+        label: Last updated (optional)
+        type: date
+        default: ""
+      - name: seo
+        component: seo
+
+  - name: lookbooks
+    label: Lookbooks
+    type: collection
+    path: src/content/lookbooks
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, date, draft]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: draft
+        label: Draft (hidden from the public site)
+        type: boolean
+        default: true
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+      - name: excerpt
+        label: Summary
+        type: text
+      - name: room_photo
+        label: Room photo
+        type: image
+      - name: room_photo_alt
+        label: Room photo description
+        type: string
+      - name: hotspots
+        label: Numbered dots on the photo
+        description: "Place each dot with Across (0 = left edge, 100 = right edge) and Down (0 = top, 100 = bottom)."
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Dot {index}"
+        fields:
+          - name: product
+            label: Product
+            type: reference
+            required: true
+            options:
+              collection: products
+              value: "{path}"
+              label: "{name} · {retailer}"
+              search: "name,retailer"
+          - name: x
+            label: Across (0–100)
+            type: number
+            default: 50
+          - name: y
+            label: Down (0–100)
+            type: number
+            default: 50
+      - name: products
+        label: More products in this room (no dot)
+        type: reference
+        options:
+          collection: products
+          multiple: true
+          value: "{path}"
+          label: "{name} · {retailer}"
+          search: "name,retailer"
+      - name: body
+        label: The story of the room
+        type: rich-text
+        options:
+          format: markdown
+      - name: pin_image
+        label: Pinterest image (optional, tall 2:3)
+        type: image
+      - name: seo
+        component: seo
+
+  - name: products
+    label: Products
+    type: collection
+    path: src/content/products
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: name
+      fields: [name, retailer, featured]
+      search: [name, retailer]
+      default:
+        sort: name
+        order: asc
+    fields:
+      - name: name
+        label: Product name
+        type: string
+        required: true
+      - name: retailer
+        label: Store
+        type: select
+        required: true
+        options:
+          values: [Amazon, Walmart, Zazzle, Etsy, Target, Wayfair, Other]
+      - name: link
+        label: Affiliate link
+        type: string
+        required: true
+        pattern:
+          regex: "^https?://"
+          message: Paste the full link, starting with https://
+      - name: image
+        label: Product photo
+        type: image
+        description: Use a photo you are allowed to use (your own, or one the retailer's program permits).
+      - name: image_alt
+        label: Photo description
+        type: string
+      - name: description
+        label: Short description
+        type: text
+      - name: price_note
+        label: Price or deal note (optional)
+        type: string
+        description: For example "Under $30". Avoid exact prices; they change.
+      - name: featured
+        label: Show in the homepage shop band
+        type: boolean
+        default: true
+      - name: hidden
+        label: Hide from the Shop pages
+        type: boolean
+        default: false
+
+  - name: categories
+    label: Categories
+    type: collection
+    path: src/content/categories
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, order]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: title
+        label: Name
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+      - name: order
+        label: Order
+        type: number
+        default: 100
+
+  - name: books
+    label: Books
+    type: collection
+    path: src/content/books
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, order]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: subtitle
+        label: Subtitle or one-line pitch
+        type: string
+      - name: cover
+        label: Cover
+        type: image
+      - name: body
+        label: About the book
+        type: rich-text
+        options:
+          format: markdown
+      - name: links
+        label: Where to buy
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Store name
+            type: string
+          - name: url
+            label: Link
+            type: string
+      - name: order
+        label: Order
+        type: number
+        default: 100
+      - name: seo
+        component: seo
+
+  - name: stores
+    label: Stores & Businesses
+    type: collection
+    path: src/content/stores
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: name
+      fields: [name, kind, order]
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: kind
+        label: Type
+        type: select
+        options:
+          values: [Store, Business]
+      - name: tagline
+        label: One-line description
+        type: string
+      - name: url
+        label: Link
+        type: string
+        required: true
+      - name: image
+        label: Logo or banner
+        type: image
+      - name: order
+        label: Order
+        type: number
+        default: 100
+
+  - name: pages
+    label: Pages (About, Disclosures…)
+    type: collection
+    path: src/content/pages
+    filename:
+      template: "{primary}.md"
+      field: create
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: image
+        label: Photo
+        type: image
+      - name: body
+        label: Text
+        type: rich-text
+        options:
+          format: markdown
+      - name: seo
+        component: seo
+
+  - name: homepage
+    label: Homepage
+    type: file
+    path: src/content/settings/homepage.json
+    format: json
+    fields:
+      - name: lead
+        label: Lead story
+        type: reference
+        options:
+          collection: articles
+          value: "{path}"
+          label: "{title}"
+      - name: side_stories
+        label: Two stories beside the lead
+        type: reference
+        options:
+          collection: articles
+          multiple: true
+          max: 2
+          value: "{path}"
+          label: "{title}"
+      - name: latest_count
+        label: How many stories in "The Latest"
+        type: number
+        default: 4
+      - name: sections
+        label: Homepage sections (drag to reorder)
+        type: block
+        list:
+          collapsible:
+            collapsed: true
+        blockKey: type
+        blocks:
+          - name: category_row
+            label: Row of stories from a category
+            fields:
+              - name: title
+                label: Heading (optional)
+                type: string
+              - name: category
+                label: Category
+                type: reference
+                options:
+                  collection: categories
+                  value: "{path}"
+                  label: "{title}"
+              - name: count
+                label: Number of stories
+                type: number
+                default: 4
+          - name: shop_band
+            label: Shop band
+            fields:
+              - name: kicker
+                label: Small label
+                type: string
+              - name: title
+                label: Heading
+                type: string
+              - name: products
+                label: Products (leave empty to show products marked for the homepage)
+                type: reference
+                options:
+                  collection: products
+                  multiple: true
+                  value: "{path}"
+                  label: "{name} · {retailer}"
+              - name: count
+                label: How many to show
+                type: number
+                default: 5
+          - name: lookbook_feature
+            label: Featured lookbook
+            fields:
+              - name: lookbook
+                label: Lookbook (leave empty for the newest)
+                type: reference
+                options:
+                  collection: lookbooks
+                  value: "{path}"
+                  label: "{title}"
+          - name: two_categories
+            label: Two categories side by side
+            fields:
+              - name: left
+                label: Left
+                type: reference
+                options:
+                  collection: categories
+                  value: "{path}"
+                  label: "{title}"
+              - name: right
+                label: Right
+                type: reference
+                options:
+                  collection: categories
+                  value: "{path}"
+                  label: "{title}"
+          - name: books_and_businesses
+            label: Books & businesses
+            fields:
+              - name: title
+                label: Heading
+                type: string
+          - name: newsletter
+            label: Newsletter sign-up
+            fields:
+              - name: note
+                label: (No settings — edit the wording in Site settings)
+                type: string
+                hidden: true
+
+  - name: site
+    label: Site settings
+    type: file
+    path: src/content/settings/site.json
+    format: json
+    fields:
+      - name: title
+        label: Site name
+        type: string
+      - name: tagline
+        label: Tagline under the logo
+        type: string
+      - name: description
+        label: Site description (for Google)
+        type: text
+      - name: email
+        label: Contact email
+        type: string
+      - name: share_image
+        label: Default sharing image
+        type: image
+      - name: nav
+        label: Main menu
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: Link (e.g. /travel/ or https://…)
+            type: string
+      - name: social
+        label: Social links
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Network
+            type: string
+          - name: url
+            label: Link
+            type: string
+      - name: footer_columns
+        label: Footer columns
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: links
+            label: Links
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Label
+                type: string
+              - name: url
+                label: Link
+                type: string
+      - name: newsletter
+        label: Newsletter
+        type: object
+        fields:
+          - name: kicker
+            label: Small label
+            type: string
+          - name: heading
+            label: Heading
+            type: string
+          - name: text
+            label: Text (optional)
+            type: text
+          - name: form_action
+            label: Kit form address
+            type: string
+            description: From Kit, the form's "action" link. Leave empty to show "opens soon".
+          - name: email_field
+            label: Kit email field name
+            type: string
+            default: email_address
+      - name: disclosures
+        label: Affiliate disclosures
+        type: object
+        fields:
+          - name: affiliate
+            label: Shown on posts with product links
+            type: text
+          - name: amazon
+            label: Amazon Associates statement (footer)
+            type: text
+      - name: analytics_token
+        label: Cloudflare Web Analytics token
+        type: string
+      - name: google_site_verification
+        label: Google Search Console verification code
+        type: string
+      - name: pinterest_domain_verify
+        label: Pinterest domain verification code
+        type: string
+      - name: pinterest_save_button
+        label: Show Pinterest Save button on photos
+        type: boolean
+
+settings:
+  commit:
+    identity: user

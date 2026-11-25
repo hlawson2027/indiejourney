@@ -1,0 +1,11 @@
+{
+  // The public website. Served from Cloudflare's network as static files (free, unlimited requests).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "indiejourney",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

@@ -1,0 +1,12 @@
+---
+import ShopPage from '../../components/ShopPage.astro';
+import { getProducts, retailerSlug } from '../../lib/content';
+
+export async function getStaticPaths() {
+  // Amazon, Walmart and Zazzle always get a page; any new retailer you add gets one automatically.
+  const names = new Set(['Amazon', 'Walmart', 'Zazzle', ...(await getProducts()).map((p) => p.data.retailer)]);
+  return [...names].map((r) => ({ params: { retailer: retailerSlug(r) }, props: { name: r } }));
+}
+const { name } = Astro.props;
+---
+<ShopPage retailer={name} />

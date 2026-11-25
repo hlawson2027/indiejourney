@@ -1,0 +1,156 @@
+---
+import Base from '../layouts/Base.astro';
+import Img from '../components/Img.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ProductCard from '../components/ProductCard.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { home, settings } from '../lib/settings';
+import {
+  getArticles, getLookbooks, getProducts, getProductMap, getCategoryMap, getBooks, getStores,
+  articleUrl, lookbookUrl, categoryUrl, pickProducts, retailerSlug,
+} from '../lib/content';
+
+const articles = await getArticles();
+const catMap = await getCategoryMap();
+const productMap = await getProductMap();
+const kicker = (a: (typeof articles)[number]) => catMap.get(a.data.category)?.data.title;
+const byId = new Map(articles.map((a) => [a.id, a]));
+
+const lead = (home.lead && byId.get(home.lead)) || articles.find((a) => a.data.featured) || articles[0];
+const used = new Set([lead?.id]);
+let side = home.side_stories.map((id) => byId.get(id)).filter((a) => a && !used.has(a.id)) as typeof articles;
+if (side.length < 2) side = [...side, ...articles.filter((a) => !used.has(a.id) && !side.includes(a))].slice(0, 2);
+side.forEach((a) => used.add(a.id));
+const latest = articles.filter((a) => !used.has(a.id)).slice(0, home.latest_count);
+
+const lookbooks = await getLookbooks();
+const allProducts = await getProducts();
+const books = await getBooks();
+const stores = await getStores();
+const retailers = [...new Set(allProducts.map((p) => p.data.retailer))];
+const leadLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: settings.title,
+  url: Astro.site?.href,
+};
+---
+<Base jsonld={leadLd}>
+  <div class="wrap">
+    {lead ? (
+      <section class="hero" aria-label="Featured stories">
+        <div class="hero-side">
+          {side.map((a) => <ArticleCard article={a} kicker={kicker(a)} ratio="32" sizes="(max-width: 760px) 100vw, 280px" />)}
+        </div>
+        <article class="hero-lead">
+          <a href={articleUrl(lead)} tabindex="-1" aria-hidden="true">
+            <Img src={lead.data.cover} alt={lead.data.cover_alt || ''} seed={lead.data.title} ratio="45" eager widths={[400, 640, 800, 1000]} sizes="(max-width: 760px) 100vw, 560px" />
+          </a>
+          <span class="kick" style="margin-top:22px">{kicker(lead)}</span>
+          <h1 class="hed"><a href={articleUrl(lead)}>{lead.data.title}</a></h1>
+          {lead.data.excerpt && <p class="dek">{lead.data.excerpt}</p>}
+        </article>
+        <aside class="latest" aria-labelledby="latest-h">
+          <span class="kick dark" id="latest-h">The Latest</span>
+          <ol>
+            {latest.map((a, i) => (
+              <li><span class="num" aria-hidden="true">{i + 1}</span><a class="hed" href={articleUrl(a)}>{a.data.title}</a></li>
+            ))}
+          </ol>
+        </aside>
+      </section>
+    ) : (
+      <p class="empty">Your first story will appear here once it is published.</p>
+    )}
+
+    {home.sections.map((s) => {
+      if (s.type === 'category_row') {
+        const cat = catMap.get(s.category);
+        const items = articles.filter((a) => a.data.category === s.category && !used.has(a.id)).slice(0, Number(s.count || 4));
+        if (!cat || items.length === 0) return null;
+        return (
+          <section class="section">
+            <div class="sec"><h2>{s.title || cat.data.title}</h2><span class="rule"></span><a class="more" href={categoryUrl(cat.id)}>See all</a></div>
+            <div class="grid scroller">{items.map((a) => <ArticleCard article={a} kicker={kicker(a)} sizes="(max-width: 760px) 72vw, 290px" />)}</div>
+          </section>
+        );
+      }
+      if (s.type === 'shop_band') {
+        let items = pickProducts(s.products, productMap);
+        if (items.length === 0) items = allProducts.filter((p) => p.data.featured);
+        items = items.slice(0, Number(s.count || 5));
+        if (items.length === 0) return null;
+        return (
+          <section class="section band">
+            <div class="band-head">
+              <div><span class="kick">{s.kicker || 'Shop'}</span><h2 class="hed">{s.title || 'Indie Finds'}</h2></div>
+              <nav class="filters" aria-label="Shop by store">
+                <a href="/shop/" class="on">All</a>
+                {retailers.map((r) => <a href={`/shop/${retailerSlug(r)}/`}>{r}</a>)}
+              </nav>
+            </div>
+            <div class="products">{items.map((p) => <ProductCard product={p} />)}</div>
+            <p class="disclosure">{settings.disclosures.affiliate}</p>
+          </section>
+        );
+      }
+      if (s.type === 'lookbook_feature') {
+        const lb = lookbooks.find((l) => l.id === s.lookbook) || lookbooks[0];
+        if (!lb) return null;
+        const spots = lb.data.hotspots.map((h) => ({ ...h, p: productMap.get(h.product) })).filter((h) => h.p);
+        return (
+          <section class="section lookbook">
+            <div class="room">
+              <a href={lookbookUrl(lb)} tabindex="-1" aria-hidden="true"><Img src={lb.data.room_photo} alt={lb.data.room_photo_alt || ''} ratio="45" sizes="(max-width: 760px) 100vw, 600px" /></a>
+              {spots.map((h, i) => <a class="spot" style={`left:${h.x}%;top:${h.y}%`} href={h.p!.data.link} rel="sponsored noopener" target="_blank" aria-label={`${i + 1}: ${h.p!.data.name} at ${h.p!.data.retailer}`}>{i + 1}</a>)}
+            </div>
+            <div>
+              <span class="kick">Lookbook</span>
+              <h2 class="hed" style="font-size:clamp(30px,4vw,44px);margin-top:12px"><a href={lookbookUrl(lb)}>{lb.data.title}</a></h2>
+              {lb.data.excerpt && <p class="dek" style="margin-bottom:24px">{lb.data.excerpt}</p>}
+              <ol class="shoplist">
+                {spots.map((h, i) => <li><span>{i + 1} · {h.p!.data.name}</span><a href={h.p!.data.link} rel="sponsored noopener" target="_blank">{h.p!.data.retailer} →</a></li>)}
+              </ol>
+              <a class="btn" href={lookbookUrl(lb)}>Shop the full room</a>
+            </div>
+          </section>
+        );
+      }
+      if (s.type === 'two_categories') {
+        const sides = [s.left, s.right].map((id) => catMap.get(id)).filter(Boolean);
+        if (sides.length === 0) return null;
+        return (
+          <section class="section cols2">
+            {sides.map((cat) => {
+              const items = articles.filter((a) => a.data.category === cat!.id).slice(0, 3);
+              return (
+                <div>
+                  <div class="sec"><h2>{cat!.data.title}</h2><span class="rule"></span><a class="more" href={categoryUrl(cat!.id)}>See all</a></div>
+                  {items.length ? items.map((a) => <ArticleCard article={a} variant="row" kicker={cat!.data.title} />) : <p class="empty">Stories coming soon.</p>}
+                </div>
+              );
+            })}
+          </section>
+        );
+      }
+      if (s.type === 'books_and_businesses') {
+        if (books.length + stores.length === 0) return null;
+        return (
+          <section class="section">
+            <div class="sec"><h2>{s.title || 'Books & Businesses'}</h2><span class="rule"></span></div>
+            <div class="grid scroller">
+              {books.slice(0, 2).map((b) => (
+                <a class="card book" href={`/books/${b.id}/`}><Img src={b.data.cover} alt={`Cover of ${b.data.title}`} ratio="23" tint="#1E1B18" sizes="(max-width: 760px) 72vw, 290px" /><span class="kick">My Books</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{b.data.title}</span></a>
+              ))}
+              {stores.slice(0, 4 - Math.min(2, books.length)).map((st) => (
+                <a class="card" href={st.data.url} rel="noopener" target="_blank"><Img src={st.data.image} alt={st.data.name} ratio="23" sizes="(max-width: 760px) 72vw, 290px" /><span class="kick">{st.data.kind === 'Business' ? 'Business' : 'My Stores'}</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{st.data.name}</span>{st.data.tagline && <p class="dek">{st.data.tagline}</p>}</a>
+              ))}
+            </div>
+          </section>
+        );
+      }
+      if (s.type === 'newsletter') return <Newsletter />;
+      return null;
+    })}
+  </div>
+</Base>

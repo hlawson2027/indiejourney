@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import { getBooks } from '../../lib/content';
+const books = await getBooks();
+---
+<Base title="My Books" description="Books by The Indie Journey.">
+  <div class="wrap">
+    <header class="pagehead"><h1 class="hed">My Books</h1></header>
+    {books.length ? (
+      <div class="grid">
+        {books.map((b) => (
+          <article class="card book">
+            <a href={`/books/${b.id}/`} tabindex="-1" aria-hidden="true"><Img src={b.data.cover} alt={`Cover of ${b.data.title}`} ratio="23" tint="#1E1B18" sizes="(max-width: 760px) 100vw, 290px" /></a>
+            <h2 class="hed" style="font-size:22px;margin-top:14px"><a href={`/books/${b.id}/`}>{b.data.title}</a></h2>
+            {b.data.subtitle && <p class="dek">{b.data.subtitle}</p>}
+          </article>
+        ))}
+      </div>
+    ) : <p class="empty">Books coming soon.</p>}
+  </div>
+</Base>

@@ -1,0 +1,68 @@
+{
+  "title": "The Indie Journey",
+  "tagline": "Home · Travel · Running · Business · A life built my way",
+  "description": "The Indie Journey is a lifestyle magazine about building an independent life: home and living, The Spain Diaries, running, travel, rentals, books and business.",
+  "email": "",
+  "share_image": "",
+  "nav": [
+    { "label": "My Journey", "url": "/my-journey/" },
+    { "label": "The Spain Diaries", "url": "/spain-diaries/" },
+    { "label": "Home & Living", "url": "/home-living/" },
+    { "label": "Lookbooks", "url": "/lookbooks/" },
+    { "label": "Landlord Diaries", "url": "/landlord-diaries/" },
+    { "label": "Running", "url": "/running-adventures/" },
+    { "label": "Travel", "url": "/travel/" },
+    { "label": "Books", "url": "/books/" },
+    { "label": "Business", "url": "/business/" },
+    { "label": "Shop", "url": "/shop/" },
+    { "label": "About", "url": "/about/" }
+  ],
+  "social": [
+    { "label": "Pinterest", "url": "https://www.pinterest.com/hlawsonny/" },
+    { "label": "YouTube", "url": "https://www.youtube.com/@indiejourney-z2o" },
+    { "label": "Facebook", "url": "" }
+  ],
+  "footer_columns": [
+    {
+      "heading": "Read",
+      "links": [
+        { "label": "My Journey", "url": "/my-journey/" },
+        { "label": "The Spain Diaries", "url": "/spain-diaries/" },
+        { "label": "Travel", "url": "/travel/" },
+        { "label": "Business", "url": "/business/" }
+      ]
+    },
+    {
+      "heading": "Shop",
+      "links": [
+        { "label": "Amazon Finds", "url": "/shop/amazon/" },
+        { "label": "Walmart Finds", "url": "/shop/walmart/" },
+        { "label": "My Zazzle Store", "url": "/shop/zazzle/" },
+        { "label": "My Stores", "url": "/stores/" }
+      ]
+    },
+    {
+      "heading": "About",
+      "links": [
+        { "label": "About Me", "url": "/about/" },
+        { "label": "Disclosures", "url": "/disclosures/" },
+        { "label": "Privacy", "url": "/privacy/" }
+      ]
+    }
+  ],
+  "newsletter": {
+    "kicker": "The Indie Letter",
+    "heading": "One good email a week. Finds, stories, no noise.",
+    "text": "",
+    "form_action": "",
+    "email_field": "email_address"
+  },
+  "disclosures": {
+    "affiliate": "This post contains affiliate links. If you buy through them I may earn a small commission at no extra cost to you.",
+    "amazon": "As an Amazon Associate I earn from qualifying purchases."
+  },
+  "analytics_token": "",
+  "google_site_verification": "",
+  "pinterest_domain_verify": "",
+  "pinterest_save_button": true
+}

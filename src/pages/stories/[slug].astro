@@ -1,0 +1,97 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { settings } from '../../lib/settings';
+import { shareImage } from '../../lib/images';
+import { getArticles, getCategoryMap, getProductMap, pickProducts, categoryUrl, formatDate, articleUrl } from '../../lib/content';
+import { youtubeHtml } from '../../plugins/remark-indie.mjs';
+
+export async function getStaticPaths() {
+  const articles = await getArticles();
+  return articles.map((a) => ({ params: { slug: a.id }, props: { article: a, all: articles } }));
+}
+const { article, all } = Astro.props;
+const d = article.data;
+const { Content } = await render(article);
+const cat = (await getCategoryMap()).get(d.category);
+const products = pickProducts(d.products, await getProductMap());
+const hasShortcodeProducts = /\[\[\s*product\s*:/i.test(article.body || '');
+const hasAffiliate = products.length > 0 || hasShortcodeProducts;
+const videoId = d.video?.match(/(?:v=|youtu\.be\/|shorts\/|embed\/|live\/)([A-Za-z0-9_-]{11})/)?.[1];
+const related = all.filter((a) => a.id !== article.id && a.data.category === d.category).slice(0, 3);
+const url = new URL(articleUrl(article), Astro.site).href;
+const pinPath = await shareImage(d.pin_image || d.cover, 1000);
+const pinUrl = pinPath ? new URL(pinPath, Astro.site).href : '';
+const coverPath = await shareImage(d.cover);
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: d.title,
+  description: d.seo?.description || d.excerpt || undefined,
+  datePublished: d.date.toISOString(),
+  dateModified: (d.updated || d.date).toISOString(),
+  image: coverPath ? [new URL(coverPath, Astro.site).href] : undefined,
+  author: { '@type': 'Person', name: settings.title },
+  publisher: { '@type': 'Organization', name: settings.title },
+  mainEntityOfPage: url,
+  articleSection: cat?.data.title,
+};
+---
+<Base
+  title={d.seo?.title || d.title}
+  description={d.seo?.description || d.excerpt}
+  image={d.pin_image || d.cover}
+  type="article"
+  published={d.date}
+  modified={d.updated || undefined}
+  jsonld={ld}
+>
+  <div class="wrap">
+    <article>
+      <header class="article-head">
+        {cat && <a class="kick" href={categoryUrl(cat.id)}>{cat.data.title}</a>}
+        <h1 class="hed">{d.title}</h1>
+        {d.excerpt && <p class="dek">{d.excerpt}</p>}
+        <p class="meta byline"><time datetime={d.date.toISOString()}>{formatDate(d.date)}</time></p>
+        <div class="share">
+          <a href={`https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(pinUrl)}&description=${encodeURIComponent(d.title)}`} target="_blank" rel="noopener" data-pin-do="none">Pin it</a>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`} target="_blank" rel="noopener">Share</a>
+          <button type="button" data-copy={url}>Copy link</button>
+        </div>
+      </header>
+      {d.cover && (
+        <div class="article-cover">
+          <Img src={d.cover} alt={d.cover_alt || ''} ratio="32" eager widths={[480, 720, 1000, 1400]} sizes="(max-width: 1000px) 100vw, 1000px" pinDescription={d.title} />
+        </div>
+      )}
+      <div class="prose">
+        {hasAffiliate && <p class="disclosure-top">{settings.disclosures.affiliate}</p>}
+        {videoId && <Fragment set:html={youtubeHtml(videoId, d.title)} />}
+        <Content />
+      </div>
+      {d.pin_image && (
+        <div style="display:none" aria-hidden="true"><Img src={d.pin_image} alt={d.title} ratio="23" widths={[600]} /></div>
+      )}
+    </article>
+
+    {products.length > 0 && (
+      <section class="section band" aria-labelledby="shop-h">
+        <div class="band-head"><div><span class="kick">Shop the post</span><h2 class="hed" id="shop-h">Everything I mentioned</h2></div></div>
+        <div class="products">{products.map((p) => <ProductCard product={p} />)}</div>
+        <p class="disclosure">{settings.disclosures.affiliate}</p>
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section class="section">
+        <div class="sec"><h2>More from {cat?.data.title}</h2><span class="rule"></span></div>
+        <div class="grid">{related.map((a) => <ArticleCard article={a} kicker={cat?.data.title} />)}</div>
+      </section>
+    )}
+    <Newsletter />
+  </div>
+</Base>
