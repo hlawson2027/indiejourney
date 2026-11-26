@@ -1,6 +1,6 @@
 ---
 title: "My Best Month Took Just 2 Hours: What October Taught Me About Building Systems"
-excerpt: "In October I ran the Chicago Marathon, spent two hours on my Amazon storefront and posted about 10 videos. It was still my best month ever. Here's why, and what it taught me about building a business that keeps going when you can't."
+excerpt: "In October I ran the Chicago Marathon, spent two hours on my Amazon storefront and posted about 10 new videos. It was still my best month ever. Here's why, and what it taught me about building a business that keeps going when you can't."
 category: src/content/categories/business.md
 date: 2026-11-26
 draft: false
@@ -15,11 +15,11 @@ October should have been a terrible month for my Amazon storefront.
 
 I ran the Chicago Marathon. Then I spent the days after it recovering, the way you do when your legs have just carried you 26.2 miles. And I was honestly wiped out from September, when I'd made over 200 videos in a single month for Data Coach Claire's challenge (which I won).
 
-So in October, I spent **about two hours** on my Amazon storefront. The whole month. I posted **about 10 videos**, and that was it.
+So in October, I spent **about two hours** on my Amazon storefront. The whole month. I posted **about 10 new videos**, and that was it.
 
 And it was my **best month ever: about $840**.
 
-![September vs October 2026: over 200 videos and $589 in September, about 10 videos and $840 in October](/uploads/september-vs-october.jpg)
+![September vs October 2026: over 200 videos and $589 in September, about 10 new videos and $840 in October](/uploads/september-vs-october.jpg)
 
 ## Why it still worked
 
