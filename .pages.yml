@@ -252,7 +252,7 @@ content:
         default: false
 
   - name: idealists
-    label: Amazon Lists & Zazzle Collections
+    label: Store Lists & Collections
     type: collection
     path: src/content/idealists
     filename:
@@ -273,7 +273,7 @@ content:
         label: Store
         type: select
         options:
-          values: [Amazon, Zazzle]
+          values: [Amazon, Walmart, Zazzle]
       - name: section
         label: Section on the store page
         type: select
@@ -283,7 +283,7 @@ content:
         label: List or collection link
         type: string
         required: true
-        description: "Amazon idea list link (…/shop/theindiejourn/list/…?tag=theindiejourn-20) or Zazzle collection link (…zazzle.com/collections/…)"
+        description: "Amazon idea list link (…/shop/theindiejourn/list/…?tag=theindiejourn-20) Walmart collection link (walmrt.us/…) or Zazzle collection link (…zazzle.com/collections/…)"
       - name: image_url
         label: Cover image link
         type: string

@@ -51,9 +51,9 @@ const storefront = 'https://www.amazon.com/shop/theindiejourn?tag=theindiejourn-
       </section>
     ))}
     {hasLists && (
-      <div style="text-align:center;margin:48px 0 8px"><a class="btn solid" href={isAmazon ? storefront : 'https://www.zazzle.com/store/discover_art'} rel="sponsored noopener" target="_blank">{isAmazon ? 'Visit my full Amazon storefront' : 'Visit my full Zazzle store'}</a></div>
+      <div style="text-align:center;margin:48px 0 8px"><a class="btn solid" href={isAmazon ? storefront : retailer === 'Walmart' ? 'https://walmrt.us/4vjH9Sf' : 'https://www.zazzle.com/store/discover_art'} rel="sponsored noopener" target="_blank">{isAmazon ? 'Visit my full Amazon storefront' : retailer === 'Walmart' ? 'Visit my full Walmart storefront' : 'Visit my full Zazzle store'}</a></div>
     )}
-    {items.length > 0 && hasLists && <div class="sec section"><h2>{isAmazon ? 'Single finds' : 'Favorite designs'}</h2><span class="rule"></span></div>}
+    {items.length > 0 && hasLists && <div class="sec section"><h2>{isAmazon ? 'Single finds' : retailer === 'Walmart' ? 'Favorite finds' : 'Favorite designs'}</h2><span class="rule"></span></div>}
     {items.length ? <div class="products">{items.map((p) => <ProductCard product={p} />)}</div> : !isAmazon && <p class="empty">New finds coming soon.</p>}
   </div>
 </Base>
