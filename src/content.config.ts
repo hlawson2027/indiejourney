@@ -87,6 +87,11 @@ const books = defineCollection({
     title: z.string(),
     subtitle: z.string().optional().nullable(),
     cover: img,
+    cover_url: z.string().url().optional().nullable().or(z.literal('')),
+    series: z.string().optional().nullable(),
+    series_label: z.string().optional().nullable(),
+    link: z.string().url().optional().nullable().or(z.literal('')),
+    hidden: z.boolean().optional().default(false),
     order: z.coerce.number().optional().default(100),
     links: z
       .array(z.object({ label: z.string(), url: z.string().url() }))

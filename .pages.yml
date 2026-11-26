@@ -334,20 +334,39 @@ content:
       field: create
     view:
       primary: title
-      fields: [title, order]
+      fields: [title, series, order]
+      default:
+        sort: order
+        order: asc
     fields:
       - name: title
         label: Title
         type: string
         required: true
       - name: subtitle
-        label: Subtitle or one-line pitch
+        label: One-line pitch
         type: string
+      - name: series
+        label: Series (books with the same series are grouped together)
+        type: string
+      - name: series_label
+        label: Label above the title (e.g. Book 1, Boxed set, Anthology)
+        type: string
+      - name: link
+        label: Amazon link (with your tag, e.g. https://www.amazon.com/dp/ASIN?tag=theindiejourn-20)
+        type: string
+      - name: cover_url
+        label: Cover image web address (copy from Amazon; leave blank if you upload a cover)
+        type: string
+      - name: hidden
+        label: Hide from the site
+        type: boolean
+        default: false
       - name: cover
-        label: Cover
+        label: Cover upload (optional; also gives the book its own page)
         type: image
       - name: body
-        label: About the book
+        label: About the book (optional; gives the book its own page)
         type: rich-text
         options:
           format: markdown

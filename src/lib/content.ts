@@ -44,7 +44,16 @@ export async function getCategoryMap() {
 }
 
 export async function getBooks() {
-  return (await getCollection('books')).sort((a, b) => a.data.order - b.data.order);
+  return (await getCollection('books', ({ data }) => !data.hidden)).sort((a, b) => a.data.order - b.data.order);
+}
+
+/** A book gets its own page only when it has an uploaded cover or written description; otherwise it links straight to the store. */
+export function bookHasPage(b: { body?: string; data: { cover?: unknown } }) {
+  return Boolean((b.body || '').trim() || b.data.cover);
+}
+export function bookHref(b: { id: string; body?: string; data: { cover?: unknown; link?: string | null; links: { url: string }[] } }) {
+  if (bookHasPage(b)) return `/books/${b.id}/`;
+  return b.data.link || b.data.links[0]?.url || `/books/${b.id}/`;
 }
 
 export async function getStores() {

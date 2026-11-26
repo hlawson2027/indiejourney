@@ -1,22 +1,52 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Img from '../../components/Img.astro';
-import { getBooks } from '../../lib/content';
+import { settings } from '../../lib/settings';
+import { getBooks, bookHref, bookHasPage } from '../../lib/content';
 const books = await getBooks();
+const T = '?tag=theindiejourn-20';
+const SERIES: Record<string, { intro: string; link?: string }> = {
+  'Live Free or Die': { intro: 'Age of Madness, a Kurtherian Gambit series. Ryder has been held captive for twenty years, and now it is time for payback.', link: `https://www.amazon.com/dp/B07FKGKQN7${T}` },
+  'Invasion Survivor': { intro: 'A zombie virus is only the first wave of an alien invasion, and Paige has to get her family off Earth.', link: `https://www.amazon.com/dp/B07M6KHJMX${T}` },
+  'War Kids': { intro: 'Young adult thrillers about kids surviving the fallout of war. Written as H.J. Lawson.', link: `https://www.amazon.com/dp/B075FTZJWP${T}` },
+  '13 Covens': { intro: 'A YA magical world adventure set in Salem, co-written with Cassandra and Michael Anderle.', link: `https://www.amazon.com/dp/B07PP4Q7CV${T}` },
+  'Collections & Anthologies': { intro: 'Box sets and anthologies with my stories inside.' },
+};
+const ORDER = Object.keys(SERIES);
+const series = [...new Set(books.map((b) => b.data.series || 'More Books'))].sort((a, b) => (ORDER.indexOf(a) + 1 || 99) - (ORDER.indexOf(b) + 1 || 99));
+const authorStore = 'https://link.amazon/B0dfVxRst';
 ---
-<Base title="My Books" description="Books by The Indie Journey.">
+<Base title="My Books" description="Books by Hayley Lawson: Live Free or Die, Invasion Survivor, War Kids, 13 Covens and more, on Kindle, paperback and audiobook.">
   <div class="wrap">
-    <header class="pagehead"><h1 class="hed">My Books</h1></header>
-    {books.length ? (
-      <div class="grid">
-        {books.map((b) => (
-          <article class="card book">
-            <a href={`/books/${b.id}/`} tabindex="-1" aria-hidden="true"><Img src={b.data.cover} alt={`Cover of ${b.data.title}`} ratio="23" tint="#1E1B18" sizes="(max-width: 760px) 100vw, 290px" /></a>
-            <h2 class="hed" style="font-size:22px;margin-top:14px"><a href={`/books/${b.id}/`}>{b.data.title}</a></h2>
-            {b.data.subtitle && <p class="dek">{b.data.subtitle}</p>}
-          </article>
-        ))}
-      </div>
-    ) : <p class="empty">Books coming soon.</p>}
+    <header class="pagehead">
+      <span class="kick">My Books</span>
+      <h1 class="hed" style="margin-top:10px">Stories I&rsquo;ve written</h1>
+      <p class="dek">Dystopian, sci-fi and magical adventures, series by series.</p>
+    </header>
+    <p class="disclosure-top" style="text-align:center">{settings.disclosures.affiliate.replace('This post', 'This page')} {settings.disclosures.amazon}</p>
+    {books.length ? series.map((sec) => (
+      <section class="section" style="margin-top:48px">
+        <div class="sec"><h2>{sec}</h2><span class="rule"></span></div>
+        {SERIES[sec]?.intro && <p class="dek" style="text-align:center;max-width:640px;margin:-8px auto 28px">{SERIES[sec].intro}</p>}
+        <div class="products lists">
+          {books.filter((b) => (b.data.series || 'More Books') === sec).map((b) => {
+            const own = bookHasPage(b);
+            return (
+              <a class="pcard" href={bookHref(b)} {...(own ? {} : { rel: 'sponsored noopener', target: '_blank' })}>
+                {b.data.cover
+                  ? <Img src={b.data.cover} alt={`Cover of ${b.data.title}`} ratio="23" tint="#1E1B18" sizes="(max-width: 760px) 50vw, 240px" />
+                  : <span class="media r-23 ext"><img src={b.data.cover_url} alt={`Cover of ${b.data.title}`} loading="lazy" decoding="async" width="400" height="600" referrerpolicy="no-referrer" /></span>}
+                <p class="retailer">{b.data.series_label || 'Book'}</p>
+                <p class="name">{b.data.title}</p>
+                {b.data.subtitle && <p class="note">{b.data.subtitle}</p>}
+                <p class="cta">{own ? 'Read more' : 'Read on Amazon'} <span aria-hidden="true">→</span>{!own && <span class="sr-only"> (opens in a new tab)</span>}</p>
+              </a>
+            );
+          })}
+        </div>
+        {SERIES[sec]?.link && <div style="text-align:center;margin-top:24px"><a class="btn" href={SERIES[sec].link} rel="sponsored noopener" target="_blank">See the {sec} series on Amazon</a></div>}
+      </section>
+    )) : <p class="empty">Books coming soon.</p>}
+    <div style="text-align:center;margin:56px 0 8px"><a class="btn solid" href={authorStore} rel="sponsored noopener" target="_blank">Visit my Amazon author store</a></div>
   </div>
 </Base>

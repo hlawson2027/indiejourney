@@ -3,28 +3,29 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Img from '../../components/Img.astro';
 import { settings } from '../../lib/settings';
-import { getBooks } from '../../lib/content';
+import { getBooks, bookHasPage } from '../../lib/content';
 
 export async function getStaticPaths() {
-  return (await getBooks()).map((b) => ({ params: { slug: b.id }, props: { book: b } }));
+  return (await getBooks()).filter(bookHasPage).map((b) => ({ params: { slug: b.id }, props: { book: b } }));
 }
 const { book } = Astro.props;
 const d = book.data;
 const { Content } = await render(book);
-const ld = { '@context': 'https://schema.org', '@type': 'Book', name: d.title, author: { '@type': 'Person', name: settings.title } };
+const ld = { '@context': 'https://schema.org', '@type': 'Book', name: d.title, author: { '@type': 'Person', name: 'Hayley Lawson' } };
 ---
 <Base title={d.seo?.title || d.title} description={d.seo?.description || d.subtitle} image={d.cover} jsonld={ld}>
   <div class="wrap">
     <article class="lookbook" style="margin-top:12px">
-      <div style="max-width:420px;width:100%;margin:0 auto"><Img src={d.cover} alt={`Cover of ${d.title}`} ratio="23" tint="#1E1B18" eager sizes="(max-width: 760px) 100vw, 420px" /></div>
+      <div style="max-width:420px;width:100%;margin:0 auto">{d.cover || !d.cover_url ? <Img src={d.cover} alt={`Cover of ${d.title}`} ratio="23" tint="#1E1B18" eager sizes="(max-width: 760px) 100vw, 420px" /> : <span class="media r-23 ext"><img src={d.cover_url} alt={`Cover of ${d.title}`} width="400" height="600" referrerpolicy="no-referrer" /></span>}</div>
       <div>
         <a class="kick" href="/books/">My Books</a>
         <h1 class="hed" style="font-size:clamp(32px,4vw,48px);margin-top:12px">{d.title}</h1>
         {d.subtitle && <p class="dek">{d.subtitle}</p>}
         <div class="prose" style="margin:24px 0 0"><Content /></div>
-        {d.links.length > 0 && (
+        {(d.link || d.links.length > 0) && (
           <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:28px">
-            {d.links.map((l, i) => <a class={`btn ${i === 0 ? 'solid' : ''}`} href={l.url} target="_blank" rel="noopener">Buy on {l.label}</a>)}
+            {d.link && <a class="btn solid" href={d.link} target="_blank" rel="sponsored noopener">Buy on Amazon</a>}
+            {d.links.map((l, i) => <a class={`btn ${i === 0 && !d.link ? 'solid' : ''}`} href={l.url} target="_blank" rel="sponsored noopener">Buy on {l.label}</a>)}
           </div>
         )}
       </div>

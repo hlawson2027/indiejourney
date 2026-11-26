@@ -6,7 +6,7 @@ import ProductCard from '../components/ProductCard.astro';
 import Newsletter from '../components/Newsletter.astro';
 import { home, settings } from '../lib/settings';
 import {
-  getArticles, getLookbooks, getProducts, getProductMap, getCategoryMap, getBooks, getStores,
+  getArticles, getLookbooks, getProducts, getProductMap, getCategoryMap, getBooks, getStores, bookHref, bookHasPage,
   articleUrl, lookbookUrl, categoryUrl, pickProducts, retailerSlug,
 } from '../lib/content';
 
@@ -140,7 +140,7 @@ const leadLd = {
             <div class="sec"><h2>{s.title || 'Books & Businesses'}</h2><span class="rule"></span></div>
             <div class="grid scroller">
               {books.slice(0, 2).map((b) => (
-                <a class="card book" href={`/books/${b.id}/`}><Img src={b.data.cover} alt={`Cover of ${b.data.title}`} ratio="23" tint="#1E1B18" sizes="(max-width: 760px) 72vw, 290px" /><span class="kick">My Books</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{b.data.title}</span></a>
+                <a class="card book" href={bookHref(b)} {...(bookHasPage(b) ? {} : { rel: 'sponsored noopener', target: '_blank' })}>{b.data.cover || !b.data.cover_url ? <Img src={b.data.cover} alt={`Cover of ${b.data.title}`} ratio="23" tint="#1E1B18" sizes="(max-width: 760px) 72vw, 290px" /> : <span class="media r-23 ext"><img src={b.data.cover_url} alt={`Cover of ${b.data.title}`} loading="lazy" width="400" height="600" referrerpolicy="no-referrer" /></span>}<span class="kick">My Books</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{b.data.title}</span></a>
               ))}
               {stores.slice(0, 4 - Math.min(2, books.length)).map((st) => (
                 <a class="card" href={st.data.url} rel="noopener" target="_blank"><Img src={st.data.image} alt={st.data.name} ratio="32" sizes="(max-width: 760px) 72vw, 290px" /><span class="kick">{st.data.kind === 'Business' ? 'Business' : 'My Stores'}</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{st.data.name}</span>{st.data.tagline && <p class="dek">{st.data.tagline}</p>}</a>
