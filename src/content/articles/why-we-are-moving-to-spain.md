@@ -15,6 +15,8 @@ Welcome to The Spain Diaries. If you're new here, this is the place to start, be
 
 We're not there yet, but we're aiming to make the move **in the next few years**. This is the story of how we're getting there, with the real numbers, the wins and the slow bits. I hope you'll come along for the journey.
 
+[[spain-tracker]]
+
 ## A dream that started over 20 years ago
 
 When we moved to America over 20 years ago, Spain was already the dream. Even then we talked about one day living somewhere warm and slow, with long lunches and sunshine nearly every day.
@@ -80,9 +82,7 @@ Slower doesn't mean sitting still. My best friend lives in Portugal, and I can't
 
 ## The plan, in numbers
 
-I promised real numbers, so here they are. This tracker shows where we are right now, and I update it every week:
-
-[[spain-tracker]]
+I promised real numbers, so here they are. The tracker at the top of this post shows where we are right now, and I update it every week.
 
 **1. Buy our house outright.** We're **50% of the way there** on our house savings. When the time comes, we'll sell our rental properties in the UK and Chicago and put that investment into the house too. Because homes in Spain cost so much less than in New York, this goal is actually within reach.
 
