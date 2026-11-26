@@ -213,3 +213,27 @@ main { padding-top: 44px; }
 .prose .inline-lists .retailer { margin-top: 12px; }
 .prose .inline-lists .name { margin-top: 4px; font-size: 15px; line-height: 1.35; }
 .prose .inline-lists img { margin: 0; }
+
+/* Road to Spain tracker */
+.rts-wrap { max-width: 860px; margin: 0 auto 48px; }
+.rts { background: var(--tint); border: 1px solid var(--line); border-radius: 18px; padding: clamp(20px, 3vw, 32px); margin: 32px 0; font-family: var(--sans); }
+.rts .kick { margin: 0 0 16px; color: #c8732f; }
+.rts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 640px) { .rts-grid { grid-template-columns: 1fr; } }
+.rts-label { margin: 0; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+.rts-big { margin: 4px 0 10px; font: 400 clamp(32px, 5vw, 44px)/1.1 var(--serif); color: var(--ink); }
+.rts-big span { font: 400 16px/1 var(--sans); color: var(--ink-2); }
+.rts-bar { display: block; height: 10px; border-radius: 99px; background: #fff; border: 1px solid var(--line); overflow: hidden; }
+.rts-bar span { display: block; height: 100%; background: linear-gradient(90deg, #e9b44c, #c8732f); border-radius: 99px; }
+.rts-sub { margin: 8px 0 0; font-size: 14px; color: var(--ink-3); }
+.rts-streams { list-style: none; margin: 20px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px 20px; }
+.rts-streams li { display: flex; justify-content: space-between; gap: 8px; font-size: 15px; }
+.rts-streams li span { color: var(--ink-2); }
+.rts-foot { margin: 16px 0 0; font-size: 13px; color: var(--ink-3); }
+.prose .rts p { margin: 0; }
+.prose .rts .rts-big { margin: 4px 0 10px; }
+.prose .rts .rts-sub { margin-top: 8px; }
+.prose .rts .rts-foot { margin-top: 16px; }
+.prose .rts ul.rts-streams { padding-left: 0; }
+.prose .rts ul.rts-streams li::marker { content: none; }
+.prose .rts .kick { margin-bottom: 16px; }

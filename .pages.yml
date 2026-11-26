@@ -450,6 +450,39 @@ content:
       - name: seo
         component: seo
 
+  - name: spain-tracker
+    label: Road to Spain tracker
+    type: file
+    path: src/content/settings/spain-tracker.json
+    format: json
+    fields:
+      - name: updated
+        label: Last updated
+        type: date
+      - name: house_saved_percent
+        label: House fund saved (%)
+        type: number
+      - name: income_goal_usd
+        label: Monthly income goal (USD)
+        type: number
+      - name: usd_per_eur
+        label: Dollars per euro (exchange rate)
+        type: number
+      - name: streams
+        label: Income streams
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: usd_per_month
+            label: USD per month
+            type: number
+      - name: note
+        label: Small note under the tracker
+        type: string
+
   - name: homepage
     label: Homepage
     type: file

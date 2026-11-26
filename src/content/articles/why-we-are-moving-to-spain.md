@@ -1,6 +1,6 @@
 ---
 title: "Why We're Moving to Spain (and Exactly How We're Paying for It)"
-excerpt: "A dream that started when we moved to America over 20 years ago. The sunshine, the slower days, being closer to family, and the real numbers behind our plan to retire to Spain."
+excerpt: "A dream that started when we moved to America over 20 years ago. Why Alicante, the sunshine, the slower days, being closer to family, and the real numbers behind our plan to retire to Spain."
 category: src/content/categories/spain-diaries.md
 date: 2026-11-25
 draft: false
@@ -9,11 +9,11 @@ cover: "/uploads/story-why-spain.jpg"
 cover_alt: "Why we're moving to Spain: the dream, the numbers, the plan"
 seo:
   title: "Why We're Moving to Spain: The Dream, the Numbers and the Plan | The Indie Journey"
-  description: "Why our family is planning to retire to Spain: cost of living in Alicante compared to New York, sunshine compared to England, the visa income we need, our house savings, and how affiliate income is getting us there."
+  description: "Why Gavin and I are planning to retire to Spain: cost of living in Alicante compared to New York, sunshine compared to England, the visa income we need, our house savings, and how affiliate income is getting us there."
 ---
 Welcome to The Spain Diaries. If you're new here, this is the place to start, because everything else on this site, every side job, every story and every shop, points back to one dream: **my husband Gavin and I are moving to Spain.**
 
-We're not there yet. This is the story of how we're getting there, with the real numbers, the wins and the slow bits. I hope you'll come along for the journey.
+We're not there yet, but we're aiming to make the move **in the next few years**. This is the story of how we're getting there, with the real numbers, the wins and the slow bits. I hope you'll come along for the journey.
 
 ## A dream that started over 20 years ago
 
@@ -23,11 +23,19 @@ We also knew it wouldn't just happen. To do it properly, without stress and with
 
 It's also the honest answer to a question I get a lot: *why do you have so many jobs?* I've been a designer for over 25 years. I write books under three author names. We're landlords in the UK and Chicago. I run affiliate shops and online stores. Every one of those is a brick in the house we're building in Spain.
 
-## Why Spain?
+## Why Spain, and why Alicante?
+
+![Postiguet beach in Alicante, with Santa Bárbara Castle on the hill behind it](/uploads/alicante-postiguet-beach.jpg)
+
+We've set our hearts on the **Alicante area on the Costa Blanca**, for three simple reasons:
+
+- **It's beautiful.** Golden beaches, palm-lined promenades, the old castle on the hill above the city, and mountains just behind the coast.
+- **It's close to the airport.** Alicante's airport is just outside the city, with lots of flights to the UK, so visiting family in England (and Callie at uni) will be easy.
+- **It's affordable.** More on the numbers below, but our money goes a long way there.
 
 ### The weather (compared to England, it's not even close)
 
-We're looking at the **Alicante area on the Costa Blanca**, and I grew up in England, so I know grey. London gets roughly **1,400 hours of sunshine a year**. Alicante gets around **2,800 to 2,900**, about twice as much. Even in January, Alicante's daytime highs are around **16 to 17°C (about 61 to 63°F)**, while London sits at around 8°C (46°F).
+I grew up in England, so I know grey. London gets roughly **1,400 hours of sunshine a year**. Alicante gets around **2,800 to 2,900**, about twice as much. Even in January, Alicante's daytime highs are around **16 to 17°C (about 61 to 63°F)**, while London sits at around 8°C (46°F).
 
 After a lifetime of drizzle and a few New York winters, I'm ready to swap the umbrella for sunglasses.
 
@@ -42,6 +50,8 @@ In plain terms, **our money goes much, much further.** The same budget that keep
 ### Houses are so much cheaper
 
 Spanish homes cost a fraction of what we'd pay in New York, and that changes everything. Instead of a 30-year mortgage, we can aim to **buy our house outright**. No mortgage means no monthly payment hanging over us, which is the kind of freedom we've been working towards all along.
+
+![The view over Alicante and its harbour from Santa Bárbara Castle](/uploads/alicante-view-from-castle.jpg)
 
 ### Europe on our doorstep
 
@@ -62,11 +72,19 @@ And then there's the life itself. The pace we've been dreaming of:
 
 After 20-plus years of hustling, we want a life that's slower and fuller.
 
+### Adventures (in running shoes, hiking boots and, one day, with dogs)
+
+Slower doesn't mean sitting still. My best friend lives in Portugal, and I can't wait to plan **running adventures** together, from coastal runs to races on both sides of the border. Gavin and I are looking forward to **hiking** together in the mountains behind the Costa Blanca. And once we're settled, we're finally **getting some dogs**. Jinx may have opinions about that.
+
+![The harbour promenade in Alicante at sunset, with the castle in the distance](/uploads/alicante-harbour-promenade.jpg)
+
 ## The plan, in numbers
 
-I promised real numbers, so here they are.
+I promised real numbers, so here they are. This tracker shows where we are right now, and I update it every week:
 
-**1. Buy our house outright.** We're **50% of the way there** on our house savings. Because homes in Spain cost so much less than in New York, this goal is actually within reach.
+[[spain-tracker]]
+
+**1. Buy our house outright.** We're **50% of the way there** on our house savings. When the time comes, we'll sell our rental properties in the UK and Chicago and put that investment into the house too. Because homes in Spain cost so much less than in New York, this goal is actually within reach.
 
 **2. Bring in $4,000 a month.** To live in Spain as non-EU residents we need a visa, and that means showing a steady monthly income. The common route for people who aren't working for a Spanish employer is the non-lucrative visa. For 2026 it asks for **€2,400 a month (about $2,640)** for the main applicant plus **€600 (about $660)** for a spouse, so **€3,000 a month (about $3,300)** for the two of us. Our target is **$4,000 a month (about €3,640)**, so we're comfortably above the minimum with a cushion for real life and for exchange-rate swings.
 
@@ -88,4 +106,4 @@ If you want the backstory first, read [From Lancaster to Long Island (and Someda
 
 *¡Hasta pronto!*
 
-<small>Cost of living and sunshine figures are averages from public comparison sites (Freenance, Livingcost) and climate records. Dollar amounts are converted at about $1.10 to €1 and will change with the exchange rate. Figures vary by area and year. Visa requirements change, so always check the current rules with the Spanish consulate or an immigration lawyer. As an Amazon Associate I earn from qualifying purchases.</small>
+<small>Cost of living and sunshine figures are averages from public comparison sites (Freenance, Livingcost) and climate records. Dollar amounts are converted at about $1.10 to €1 and will change with the exchange rate. Figures vary by area and year. Photos of Alicante: Cale Weaver (Unsplash), Laborinquen and Wikimedia Commons contributors, released into the public domain (CC0). Visa requirements change, so always check the current rules with the Spanish consulate or an immigration lawyer. As an Amazon Associate I earn from qualifying purchases.</small>

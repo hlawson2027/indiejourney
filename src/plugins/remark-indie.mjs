@@ -1,12 +1,14 @@
 // Turns simple things typed in the dashboard editor into rich blocks:
 //   • a paragraph that is just  [[product: Product name]]  → a shoppable product card
 //   • a paragraph that is just  [[lists: list-one, list-two]]  → a grid of shoppable list/collection cards
+//   • a paragraph that is just  [[spain-tracker]]  → the Road to Spain progress box
 //   • a paragraph that is just a YouTube link            → a fast, click-to-play video
 //   • images uploaded into the article body (/uploads/…)  → optimized by Astro
 import fs from 'node:fs';
 import path from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import { visit } from 'unist-util-visit';
+import { spainTrackerHtml } from '../lib/spain-tracker.mjs';
 
 const ROOT = process.cwd();
 const UPLOADS = path.join(ROOT, 'src/assets/uploads');
@@ -114,6 +116,11 @@ export default function remarkIndie() {
           return `<a class="pcard" href="${esc(l.link)}" rel="sponsored noopener" target="_blank"><span class="media r-11 ext"><img src="${esc(l.image_url || '')}" alt="" loading="lazy" decoding="async" width="550" height="550" referrerpolicy="no-referrer"></span><p class="retailer">${esc(store)} ${label.toLowerCase()}</p><p class="name">${esc(l.title)}</p><p class="cta">Shop the ${store === 'Amazon' ? 'list' : 'collection'} →</p></a>`;
         }).join('');
         parent.children.splice(index, 1, { type: 'html', value: cards ? `<div class="products lists inline-lists">${cards}</div>` : '' });
+        return index + 1;
+      }
+
+      if (/^\[\[\s*spain-tracker\s*\]\]$/i.test(text)) {
+        parent.children.splice(index, 1, { type: 'html', value: spainTrackerHtml() });
         return index + 1;
       }
 

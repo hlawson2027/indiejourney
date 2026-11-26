@@ -1,0 +1,13 @@
+{
+  "updated": "2026-11-25",
+  "house_saved_percent": 50,
+  "income_goal_usd": 4000,
+  "usd_per_eur": 1.10,
+  "streams": [
+    { "name": "Amazon", "usd_per_month": 800 },
+    { "name": "Walmart", "usd_per_month": 0 },
+    { "name": "Zazzle", "usd_per_month": 0 },
+    { "name": "Other affiliates", "usd_per_month": 0 }
+  ],
+  "note": "Updated every week."
+}
