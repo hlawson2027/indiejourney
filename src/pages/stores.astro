@@ -14,10 +14,10 @@ const groups = [...new Set(stores.map((s) => s.data.kind || 'Store'))];
     {groups.map((g) => (
       <section class="section" style="margin-top:0;margin-bottom:56px">
         <div class="sec"><h2>{g === 'Store' ? 'Stores' : g === 'Business' ? 'Businesses' : g}</h2><span class="rule"></span></div>
-        <div class="grid">
+        <div class="grid wide">
           {stores.filter((s) => (s.data.kind || 'Store') === g).map((s) => (
             <a class="card storecard" href={s.data.url} target="_blank" rel="noopener">
-              <Img src={s.data.image} alt={s.data.name} ratio="32" sizes="(max-width: 760px) 100vw, 290px" />
+              <Img src={s.data.image} alt={s.data.name} ratio="32" sizes="(max-width: 760px) 100vw, 400px" />
               <span class="hed" style="font-size:22px">{s.data.name}</span>
               {s.data.tagline && <span class="dek" style="margin:0">{s.data.tagline}</span>}
               <span class="kick dark">Visit →</span>

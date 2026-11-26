@@ -143,7 +143,7 @@ const leadLd = {
                 <a class="card book" href={`/books/${b.id}/`}><Img src={b.data.cover} alt={`Cover of ${b.data.title}`} ratio="23" tint="#1E1B18" sizes="(max-width: 760px) 72vw, 290px" /><span class="kick">My Books</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{b.data.title}</span></a>
               ))}
               {stores.slice(0, 4 - Math.min(2, books.length)).map((st) => (
-                <a class="card" href={st.data.url} rel="noopener" target="_blank"><Img src={st.data.image} alt={st.data.name} ratio="23" sizes="(max-width: 760px) 72vw, 290px" /><span class="kick">{st.data.kind === 'Business' ? 'Business' : 'My Stores'}</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{st.data.name}</span>{st.data.tagline && <p class="dek">{st.data.tagline}</p>}</a>
+                <a class="card" href={st.data.url} rel="noopener" target="_blank"><Img src={st.data.image} alt={st.data.name} ratio="32" sizes="(max-width: 760px) 72vw, 290px" /><span class="kick">{st.data.kind === 'Business' ? 'Business' : 'My Stores'}</span><span class="hed" style="display:block;font-size:20px;margin-top:6px">{st.data.name}</span>{st.data.tagline && <p class="dek">{st.data.tagline}</p>}</a>
               ))}
             </div>
           </section>
