@@ -7,7 +7,7 @@ It works the same on your phone and your laptop. Every **Save** publishes to the
 
 1. **Write a story** — Stories → **Add an entry**. Fill in Title, Category, Publish date, Cover photo, Summary and Story. Leave **Draft** ticked while you work, then untick it and Save to publish.
 2. **Save a draft** — keep **Draft** ticked and Save. It's stored but hidden from the public site.
-3. **Preview before publishing** — drafts appear on your private preview site (link in Setup notes below) about two minutes after you Save.
+3. **Preview before publishing** — drafts appear on your private preview site, **https://preview.myindiejourney.com**, about two minutes after you Save. Sign in with hlawsonny@gmail.com; Cloudflare emails you a one-time code.
 4. **Schedule a story** — untick Draft and pick a future Publish date. The site rebuilds every morning at about 5:15 a.m. New York time and the story appears that day.
 5. **Add photos** — tap any photo field and upload from your camera roll. The site resizes and compresses them for you. Always fill in the short photo description.
 6. **Add a product** — Products → **Add an entry**: name, store, affiliate link, photo, short description. Tick "Show in the homepage shop band" to feature it.
@@ -23,7 +23,7 @@ It works the same on your phone and your laptop. Every **Save** publishes to the
 - **Books and stores**: Books, and Stores & Businesses. New ones appear on /books/ and /stores/ automatically.
 - **About, Disclosures, Privacy**: Pages.
 - **Publish immediately** (for example a scheduled post you want out now): the **Publish site now** button on the Stories page.
-- **Stats**: Cloudflare dashboard (or the Cloudflare phone app) → Analytics & Logs → Web Analytics.
+- **Stats**: Cloudflare dashboard (or the Cloudflare phone app) → Analytics → Web analytics → myindiejourney.com.
 - **Undo a mistake**: every save is kept forever. Ask Claude to "restore the previous version of <page>".
 
 ## Rules of thumb
