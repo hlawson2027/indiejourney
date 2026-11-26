@@ -42,7 +42,7 @@ If you want to look at it yourself, [here's Build Past $1k](https://stan.store/a
 
 In September, Claire ran a challenge, and I went all in. I made **over 200 videos in one month**, while also working hard on my pins and idea lists. **And I won the challenge.**
 
-The prize was a year of **Viral Vue** (a research tool for Amazon Influencers) plus **$500**. I was running the Chicago Marathon for charity in October, so I asked Claire to donate the $500 to my charity for the last part of my fundraising. I was so pleased to have won.
+The prize was a year of **[Viral Vue](https://viralvue.com/affiliates/amazon-influencer?fpr=hayley-9d4355)** (a research tool for Amazon Influencers) plus **$500**. I was running the Chicago Marathon for charity in October, so I asked Claire to donate the $500 to my charity for the last part of my fundraising. I was so pleased to have won.
 
 It was a lot of work, but you can see what it did in the chart: September was my best month at the time, and **October was my best month ever at about $840** (about €764), even though I barely touched my storefront that month. (I wrote about that in [My Best Month Took Just 2 Hours](/stories/my-best-month-took-two-hours/).)
 

@@ -3,7 +3,7 @@ title: "Creator Tools I Use"
 image: ""
 seo:
   title: "Creator Tools I Use for My Amazon Influencer Business | The Indie Journey"
-  description: "The courses and tools behind my Amazon Influencer storefront: Data Coach Claire's beginner course and Build Past $1k, Oink for Influencers and CreatorKit, with my affiliate links and discount code."
+  description: "The courses and tools behind my Amazon Influencer storefront: Data Coach Claire's beginner course and Build Past $1k, Viral Vue, Oink for Influencers and CreatorKit, with my affiliate links and discount codes."
 ---
 These are the courses and tools I actually use to run my Amazon Influencer storefront and affiliate business: the ones behind the numbers in [How I've Earned $2,878 in Commissions So Far](/stories/my-affiliate-income-journey-so-far/).
 
@@ -26,6 +26,14 @@ Some of the links below are affiliate links. If you sign up through them, I may 
 </div>
 
 ## Tools
+
+<div class="tool">
+  <p class="tool-kick">Research tool · Chrome extension &amp; web app</p>
+  <h3>Viral Vue</h3>
+  <p>An all-in-one research tool for Amazon Influencers. It helps you find products worth filming, check how many influencer videos a product already has, and track Creator Connections campaigns. I won a year of Viral Vue in Claire's September challenge.</p>
+  <p class="tool-code">Use code <strong>WELCOME10</strong> for 10% off.</p>
+  <p><a class="btn solid" href="https://viralvue.com/affiliates/amazon-influencer?fpr=hayley-9d4355" rel="sponsored noopener" target="_blank">Try Viral Vue</a></p>
+</div>
 
 <div class="tool">
   <p class="tool-kick">Research tool · Chrome extension</p>
