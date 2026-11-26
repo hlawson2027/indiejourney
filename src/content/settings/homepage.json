@@ -26,6 +26,10 @@
       "count": 4
     },
     {
+      "type": "lookbook_feature",
+      "lookbook": "src/content/lookbooks/warm-and-soft-living-room.md"
+    },
+    {
       "type": "two_categories",
       "left": "src/content/categories/home-living.md",
       "right": "src/content/categories/travel.md"
