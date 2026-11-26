@@ -33,9 +33,21 @@ A few things that surprised me:
 
 ## How I did it
 
-The key was treating it like a training plan rather than a list of races. NYRR races range from short 5Ks to half marathons, and they're spread across the year and all five boroughs. That gave me a reason to get out the door all year, and a ready-made build-up to the marathon itself.
+The key was treating it like a training plan rather than a list of races. NYRR races range from a single mile to half marathons, and they're spread across the year and all five boroughs. That gave me a reason to get out the door all year, and a ready-made build-up to the marathon itself.
 
-Doing it a second time was easier because I knew the rhythm: plan early, register as soon as races open, and book the volunteer shift before it's gone.
+### My favorite race: one wet mile
+
+Of all my races, my favorite was the shortest: the New Balance Fifth Avenue Mile, a straight shot down 20 blocks of Fifth Avenue. It was a wet, rainy morning, and I ran my best mile ever: **8 minutes 38 seconds**.
+
+There was no time to celebrate. As soon as I crossed the line I had to rush off and jump on a plane to Germany for work. Still soaked, still grinning. That's pretty much the story of my life in one morning.
+
+### My +1: the day before the marathon
+
+For my volunteer shift, I helped hand out runners' bags the day before the 2025 TCS New York City Marathon, and it turned out to be one of my favorite days of the whole year.
+
+Every person who came through was running the marathon the next morning. Some were buzzing with excitement, some were scared, and plenty were just plain nervous. I loved chatting with them, wishing them luck and cheering them on. It's a reminder that every runner on that bridge has a story, and a lot of nerves the night before. A year later, I was one of them.
+
+Doing 9+1 a second time was easier because I knew the rhythm: plan early, register as soon as races open, and book the volunteer shift before it's gone.
 
 ## My tips if you want to try it
 
@@ -43,7 +55,7 @@ Doing it a second time was easier because I knew the rhythm: plan early, registe
 
 **2. Register the moment races open.** 9+1 has become so popular that qualifying races fill up fast. Know when registration opens and be ready.
 
-**3. Book your volunteer shift early.** Volunteer spots can be even harder to get than race entries. Check that the shift is marked as eligible for 9+1, and book one on a day you're not racing.
+**3. Book your volunteer shift early, and pick one you'll enjoy.** Volunteer spots can be even harder to get than race entries. Check that the shift is marked as eligible for 9+1, and book one on a day you're not racing. If you can, volunteer around the marathon itself: meeting the runners the day before is something special.
 
 **4. Make sure each race actually counts.** Not every NYRR event is a qualifier, and some races now set aside bibs that don't count toward 9+1. Check before you register.
 
