@@ -90,7 +90,7 @@ const leadLd = {
               </nav>
             </div>
             <div class="products">{items.map((p) => <ProductCard product={p} />)}</div>
-            <p class="disclosure">{settings.disclosures.affiliate}</p>
+            <p class="disclosure">{settings.disclosures.affiliate.replace('This post', 'This section')}</p>
           </section>
         );
       }

@@ -26,7 +26,7 @@ const path = Astro.url.pathname;
       {retailers.map((r) => <a href={`/shop/${retailerSlug(r)}/`} aria-current={path === `/shop/${retailerSlug(r)}/` ? 'page' : undefined}>{r}</a>)}
       <a href="/stores/">My Stores</a>
     </nav>
-    <p class="disclosure-top" style="text-align:center">{settings.disclosures.affiliate} {retailer === 'Amazon' ? settings.disclosures.amazon : ''}</p>
+    <p class="disclosure-top" style="text-align:center">{settings.disclosures.affiliate.replace('This post', 'This page')} {retailer === 'Amazon' ? settings.disclosures.amazon : ''}</p>
     {items.length ? <div class="products">{items.map((p) => <ProductCard product={p} />)}</div> : <p class="empty">New finds coming soon.</p>}
   </div>
 </Base>
