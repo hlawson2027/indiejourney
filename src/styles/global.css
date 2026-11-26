@@ -72,6 +72,8 @@ a:hover .hed, a.hed:hover { color: var(--accent); }
 .r-34 { aspect-ratio: 3 / 4; }
 .r-32 { aspect-ratio: 3 / 2; }
 .r-11 { aspect-ratio: 1; }
+.media.ext { background: #fff; }
+.media.ext img { object-fit: contain; }
 .r-23 { aspect-ratio: 2 / 3; }
 
 /* Home hero */

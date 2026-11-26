@@ -6,7 +6,11 @@ interface Props { product: CollectionEntry<'products'>; }
 const p = Astro.props.product.data;
 ---
 <a class="pcard" href={p.link} rel="sponsored noopener" target="_blank">
-  <Img src={p.image} alt={p.image_alt || p.name} ratio="11" widths={[200, 320, 480]} sizes="(max-width: 760px) 45vw, 200px" />
+  {!p.image && p.image_url ? (
+    <span class="media r-11 ext"><img src={p.image_url} alt={p.image_alt || p.name} loading="lazy" decoding="async" width="500" height="500" referrerpolicy="no-referrer" /></span>
+  ) : (
+    <Img src={p.image} alt={p.image_alt || p.name} ratio="11" widths={[200, 320, 480]} sizes="(max-width: 760px) 45vw, 200px" />
+  )}
   <p class="retailer">{p.retailer}</p>
   <p class="name">{p.name}</p>
   {p.price_note && <p class="note">{p.price_note}</p>}

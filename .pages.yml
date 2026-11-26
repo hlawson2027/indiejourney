@@ -227,7 +227,11 @@ content:
       - name: image
         label: Product photo
         type: image
-        description: Use a photo you are allowed to use (your own, or one the retailer's program permits).
+        description: Upload your own photo, or leave empty and paste an image link below.
+      - name: image_url
+        label: Or product image link
+        type: string
+        description: "Paste the image link from Amazon (via your product engine sheet), Walmart or Zazzle. Used only when no photo is uploaded."
       - name: image_alt
         label: Photo description
         type: string

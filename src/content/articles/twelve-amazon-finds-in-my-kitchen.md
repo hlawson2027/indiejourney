@@ -6,11 +6,11 @@ date: 2026-11-10
 draft: false
 cover: ""
 products:
-  - src/content/products/linen-throw-blanket.md
-  - src/content/products/ribbed-ceramic-vase.md
+  - src/content/products/heyi-home-kitchen-rug-set.md
+  - src/content/products/highland-cow-kitchen-dish-towels.md
 ---
 Sample article. Replace this text with your own story from the dashboard, or delete this entry.
 
-[[product: Linen throw blanket]]
+[[product: HeYi Home Kitchen Rug Set]]
 
 More of your words here.

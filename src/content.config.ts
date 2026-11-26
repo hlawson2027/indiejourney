@@ -72,6 +72,7 @@ const products = defineCollection({
     retailer: z.string(),
     link: z.string().url(),
     image: img,
+    image_url: z.string().url().optional().nullable().or(z.literal('')),
     image_alt: z.string().optional().nullable(),
     description: z.string().optional().nullable(),
     price_note: z.string().optional().nullable(),

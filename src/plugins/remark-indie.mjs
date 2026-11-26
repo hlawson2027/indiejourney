@@ -81,7 +81,9 @@ export default function remarkIndie() {
             value: `<aside class="pcard-inline"><a href="${esc(p.link)}" rel="sponsored noopener" target="_blank">`,
           },
         ];
-        if (p.image && fileDir) {
+        if (!p.image && p.image_url) {
+          nodes.push({ type: 'html', value: `<span class="pcard-inline-img media ext"><img src="${esc(p.image_url)}" alt="${esc(p.image_alt || p.name)}" loading="lazy" width="240" height="240" referrerpolicy="no-referrer"></span>` });
+        } else if (p.image && fileDir) {
           nodes.push({
             type: 'paragraph',
             data: { hName: 'span', hProperties: { className: ['pcard-inline-img'] } },

@@ -6,11 +6,40 @@
   ],
   "latest_count": 4,
   "sections": [
-    { "type": "category_row", "title": "The Spain Diaries", "category": "src/content/categories/spain-diaries.md", "count": 4 },
-    { "type": "shop_band", "kicker": "Shop", "title": "Indie Finds This Week", "products": [] },
-    { "type": "lookbook_feature", "lookbook": "src/content/lookbooks/warm-minimalist-living-room.md" },
-    { "type": "two_categories", "left": "src/content/categories/running-adventures.md", "right": "src/content/categories/landlord-diaries.md" },
-    { "type": "books_and_businesses", "title": "Books & Businesses" },
-    { "type": "newsletter" }
+    {
+      "type": "category_row",
+      "title": "The Spain Diaries",
+      "category": "src/content/categories/spain-diaries.md",
+      "count": 4
+    },
+    {
+      "type": "shop_band",
+      "kicker": "Shop",
+      "title": "Indie Finds This Week",
+      "products": [
+        "src/content/products/blue-portuguese-tile-serving-tray.md",
+        "src/content/products/capiz-scalloped-glass-table-lamp.md",
+        "src/content/products/water-buffalo-quiver-running-vest.md",
+        "src/content/products/marathon-finisher-26-2-ornament.md",
+        "src/content/products/cordless-brass-scalloped-wall-sconce.md"
+      ],
+      "count": 5
+    },
+    {
+      "type": "lookbook_feature",
+      "lookbook": "src/content/lookbooks/warm-minimalist-living-room.md"
+    },
+    {
+      "type": "two_categories",
+      "left": "src/content/categories/running-adventures.md",
+      "right": "src/content/categories/landlord-diaries.md"
+    },
+    {
+      "type": "books_and_businesses",
+      "title": "Books & Businesses"
+    },
+    {
+      "type": "newsletter"
+    }
   ]
 }
