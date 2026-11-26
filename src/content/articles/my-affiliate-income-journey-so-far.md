@@ -42,7 +42,20 @@ If you want to look at it yourself, [here's Build Past $1k](https://stan.store/a
 
 In September, Claire ran a challenge, and I went all in. I made **over 200 videos in one month**, while also working hard on my pins and idea lists. **And I won the challenge.**
 
-It was a lot of work, but you can see what it did in the chart: September was my best month at the time, and **October was my best month ever at about $840** (about €764).
+The prize was a year of **Viral Vue** (a research tool for Amazon Influencers) plus **$500**. I was running the Chicago Marathon for charity in October, so I asked Claire to donate the $500 to my charity for the last part of my fundraising. I was so pleased to have won.
+
+It was a lot of work, but you can see what it did in the chart: September was my best month at the time, and **October was my best month ever at about $840** (about €764), even though I barely touched my storefront that month. (I wrote about that in [My Best Month Took Just 2 Hours](/stories/my-best-month-took-two-hours/).)
+
+## How I make my videos
+
+People always ask how I fit this in, so here's my routine:
+
+- **I batch film.** I line up my products and aim for about **10 products an hour**, filming on my iPhone on a tripod.
+- **I aim for videos over two minutes**, so there's time to really show the product.
+- **Then I move to the sofa.** I use ChatGPT to update my cover images so they pop a bit more, then upload everything from my phone.
+- **About two hours for 10 videos**, start to finish.
+
+My products come from **Amazon Vine**, **Creator Connections** campaigns, the things we buy anyway for the family and our home, and products I buy as an investment in the business. I'm now at **771 videos** on my storefront.
 
 ## Where the money actually came from
 
@@ -63,7 +76,7 @@ Right now nearly all of my income comes from Amazon itself, and brand campaigns 
 - **Pinterest every day.** New pins for my lists, stories and lookbooks.
 - **New lists every day.** A themed Amazon idea list, a Walmart collection and a Zazzle collection, each with 10 products.
 - **This website.** Real stories (like this one) that link to the things I recommend.
-- **Keep making videos.** I'm past 700 on my storefront, and they keep earning long after I make them.
+- **Keep making videos.** I'm at 771 on my storefront, and they keep earning long after I make them.
 - **Keep learning.** I'll keep working through Build Past $1k, a module at a time.
 
 You can find the courses and tools I use, with my links and discount code, on my [Creator Tools](/tools/) page.
@@ -73,6 +86,10 @@ You can find the courses and tools I use, with my links and discount code, on my
 ## Where we are against the goal
 
 October's $840 was about **23% of our €3,300 monthly goal**. There's a long way to go, but six months ago this number was zero. I'll keep updating the tracker at the top of this post every week, and I'll write another update like this one as things change, good or bad.
+
+## What I'd tell myself back in June
+
+**Keep going.** This is finally something where hard work pays off.
 
 If you're on your own journey with affiliate income, I'd love to hear how it's going.
 

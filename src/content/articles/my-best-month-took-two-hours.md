@@ -13,7 +13,7 @@ seo:
 ---
 October should have been a terrible month for my Amazon storefront.
 
-I ran the Chicago Marathon. Then I spent the days after it recovering, the way you do when your legs have just carried you 26.2 miles. And I was honestly wiped out from September, when I'd made over 200 videos in a single month for Data Coach Claire's challenge (which I won).
+I ran the Chicago Marathon, raising money for charity. Then I spent the days after it recovering, the way you do when your legs have just carried you 26.2 miles. And I was honestly wiped out from September, when I'd made over 200 videos in a single month for Data Coach Claire's challenge (which I won).
 
 So in October, I spent **about two hours** on my Amazon storefront. The whole month. I posted **about 10 new videos**, and that was it.
 
