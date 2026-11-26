@@ -6,7 +6,7 @@
   "streams": [
     {
       "name": "Amazon",
-      "usd_per_month": 666
+      "usd_per_month": 840
     },
     {
       "name": "Walmart",
@@ -21,5 +21,5 @@
       "usd_per_month": 0
     }
   ],
-  "note": "Amazon figure is our last 30 days of Amazon earnings. Updated every week."
+  "note": "Amazon figure is our October 2026 earnings (our last full month). Updated every week."
 }
