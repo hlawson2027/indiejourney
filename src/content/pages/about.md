@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "About Me: My Journey"
 image: ""
 seo:
   title: "About Hayley Lawson | The Indie Journey"
@@ -11,7 +11,7 @@ Hi, I'm Hayley, and welcome to The Indie Journey.
 
 I was born in Lancaster, England, one of six kids raised by a single parent. It wasn't easy, but it taught me early that if you want something, you build it yourself. I was always the one drawing, and that love of making things took me to the University of Central Lancashire, where I earned a BA (Hons) in fashion design. I've worked as a designer ever since, for more than 25 years now.
 
-At 27, my husband and I packed up and moved to California to chase a long-held dream. Our daughter was born there, and she's 18 now. A job later brought us to New York, and Long Island has been home ever since, along with our cat, Jinx, who runs the house.
+At 27, my husband Gavin and I packed up and moved to California to chase a long-held dream. Our daughter, Callie, was born there. She's 18 now and heading to university in England. A job later brought us to New York, and Long Island has been home ever since, along with our cat, Jinx, who runs the house.
 
 ## The writer
 
@@ -27,7 +27,7 @@ I test a lot of running gear, fitness finds and everyday products along the way,
 
 ## The landlord
 
-I'm also a landlord, with rental properties in the **UK and Chicago**. Managing homes across an ocean has taught me a lot, and I share the real side of it, the good and the not-so-glamorous, in [Landlord Diaries](/landlord-diaries/).
+I'm also a landlord, with rental properties in the **UK and Chicago**. Managing homes across an ocean has taught me a lot, and I'll be sharing the real side of it, the good and the not-so-glamorous, in Landlord Diaries.
 
 ## The maker and the business side
 
@@ -42,11 +42,15 @@ You can find them all on [My Stores](/stores/).
 
 ## The Spain plan
 
-All of this is building toward one big goal: my husband and I are working toward retiring to **Spain**. Every book, rental and side business is a step on that road, and I'm writing about the whole journey in [The Spain Diaries](/spain-diaries/).
+All of this is building toward one big goal: Gavin and I are working toward retiring to the **Alicante area of Spain** in the next few years. Every book, rental and side business is a step on that road. I've shared the why, the real numbers and our progress tracker in [Why We're Moving to Spain](/stories/why-we-are-moving-to-spain/), and I'm writing about the whole journey in [The Spain Diaries](/spain-diaries/).
 
 ## Why The Indie Journey
 
 I've never followed a straight line. This magazine is the home for all of it: design, books, running, home and living, travel, rentals, the businesses, the road to Spain, and the honest middle bits in between. It's for anyone building a life their own way, one step (or one mile) at a time.
+
+## Read my story
+
+If you'd like the longer version, with more about growing up in Lancaster, the move across the ocean and how it all points to Spain, read [From Lancaster to Long Island (and Someday, Spain)](/stories/from-lancaster-to-long-island-and-someday-spain/).
 
 Thank you for being here. Come say hi on [Pinterest](https://www.pinterest.com/hlawsonny/), [YouTube](https://www.youtube.com/@indiejourney-z2o), [TikTok](https://www.tiktok.com/@hayleys_hobbies) or [Facebook](https://www.facebook.com/profile.php?id=61594838702949).
 

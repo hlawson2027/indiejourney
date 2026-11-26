@@ -6,8 +6,8 @@
   "share_image": "",
   "nav": [
     {
-      "label": "My Journey",
-      "url": "/my-journey/"
+      "label": "About",
+      "url": "/about/"
     },
     {
       "label": "The Spain Diaries",
@@ -44,10 +44,6 @@
     {
       "label": "Shop",
       "url": "/shop/"
-    },
-    {
-      "label": "About",
-      "url": "/about/"
     }
   ],
   "social": [
@@ -72,10 +68,6 @@
     {
       "heading": "Read",
       "links": [
-        {
-          "label": "My Journey",
-          "url": "/my-journey/"
-        },
         {
           "label": "The Spain Diaries",
           "url": "/spain-diaries/"
