@@ -7,7 +7,7 @@ import '@fontsource/jost/600.css';
 import '../styles/global.css';
 import { settings } from '../lib/settings';
 import { shareImage } from '../lib/images';
-import { IS_PREVIEW } from '../lib/content';
+import { IS_PREVIEW, getArticles, getCategories } from '../lib/content';
 
 interface Props {
   title?: string;
@@ -20,7 +20,11 @@ interface Props {
   noindex?: boolean;
 }
 const { title, description, image, type = 'website', published, modified, jsonld, noindex = false } = Astro.props;
-const fullTitle = title ? `${title} | ${settings.title}` : `${settings.title} | ${settings.tagline}`;
+const fullTitle = title ? (title.includes(settings.title) ? title : `${title} | ${settings.title}`) : `${settings.title} | ${settings.tagline}`;
+// Hide menu links to categories that have no published stories yet (they reappear automatically once one is published).
+const liveArticles = await getArticles();
+const emptyCats = new Set((await getCategories()).filter((c) => !liveArticles.some((a) => a.data.category === c.id)).map((c) => `/${c.id}/`));
+const nav = settings.nav.filter((n) => !emptyCats.has(n.url));
 const desc = description || settings.description;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const imgPath = (await shareImage(image)) || (await shareImage(settings.share_image));
@@ -76,7 +80,7 @@ const siteLd = {
     <p class="tagline">{settings.tagline}</p>
   </header>
   <nav class="mainnav" aria-label="Main">
-    <ul>{settings.nav.map((n) => <li><a href={n.url} aria-current={isCurrent(n.url) ? 'page' : undefined}>{n.label}</a></li>)}</ul>
+    <ul>{nav.map((n) => <li><a href={n.url} aria-current={isCurrent(n.url) ? 'page' : undefined}>{n.label}</a></li>)}</ul>
   </nav>
 
   <div class="mobilebar">
@@ -88,13 +92,13 @@ const siteLd = {
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
     </a>
   </div>
-  <nav class="chips" aria-label="Sections">{settings.nav.map((n) => <a href={n.url} aria-current={isCurrent(n.url) ? 'page' : undefined}>{n.label}</a>)}</nav>
+  <nav class="chips" aria-label="Sections">{nav.map((n) => <a href={n.url} aria-current={isCurrent(n.url) ? 'page' : undefined}>{n.label}</a>)}</nav>
   <dialog class="drawer" id="menu" aria-label="Menu">
     <div class="drawer-inner">
       <button class="iconbtn" type="button" aria-label="Close menu" data-close-menu>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg>
       </button>
-      <ul>{settings.nav.map((n) => <li><a href={n.url}>{n.label}</a></li>)}</ul>
+      <ul>{nav.map((n) => <li><a href={n.url}>{n.label}</a></li>)}</ul>
       <div class="social">{social.map((s) => <a href={s.url} rel="me noopener" target="_blank">{s.label}</a>)}</div>
     </div>
   </dialog>
@@ -109,7 +113,7 @@ const siteLd = {
       {settings.footer_columns.map((col) => (
         <div>
           <span class="kick">{col.heading}</span>
-          <ul>{col.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}</ul>
+          <ul>{col.links.filter((l) => !emptyCats.has(l.url)).map((l) => <li><a href={l.url}>{l.label}</a></li>)}</ul>
         </div>
       ))}
       {social.length > 0 && (
