@@ -237,3 +237,11 @@ main { padding-top: 44px; }
 .prose .rts ul.rts-streams { padding-left: 0; }
 .prose .rts ul.rts-streams li::marker { content: none; }
 .prose .rts .kick { margin-bottom: 16px; }
+
+/* Creator tools page */
+.prose .tool { background: var(--tint); border: 1px solid var(--line); border-radius: 18px; padding: 24px 28px; margin: 24px 0; }
+.prose .tool h3 { margin: 4px 0 8px; }
+.prose .tool p { margin: 0 0 12px; font-size: 17px; }
+.prose .tool .tool-kick { font: 600 12px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0; }
+.prose .tool .tool-code { font-size: 16px; }
+.prose .tool a.btn { color: #fff; text-decoration: none; margin-top: 4px; }

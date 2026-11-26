@@ -34,9 +34,9 @@ If you're thinking of doing this yourself, it helps to know there's more than on
 
 ## August: getting help
 
-In August, I signed up for **Data Coach Claire's course**. I'm honest about this: I'm working through it slowly, around the rentals, running and everything else. But it made me look at my storefront as a business, using data rather than guessing.
+In August, I signed up for **Build Past $1k**, Data Coach Claire's course for Amazon Influencers who want to grow past their first $1,000. I'm honest about this: I'm working through it slowly, around the rentals, running and everything else. But it made me look at my storefront as a business, using data rather than guessing.
 
-If you want to look at it yourself, [this is Claire's training](https://stan.store/affiliates/b15bc3af-85c8-4b9f-9398-212a777906a2). It's an affiliate link, so I may earn a commission if you join.
+If you want to look at it yourself, [here's Build Past $1k](https://stan.store/affiliates/b15bc3af-85c8-4b9f-9398-212a777906a2). It's an affiliate link, so I may earn a commission if you join.
 
 ## September: 200 videos in a month
 
@@ -64,7 +64,9 @@ Right now nearly all of my income comes from Amazon itself, and brand campaigns 
 - **New lists every day.** A themed Amazon idea list, a Walmart collection and a Zazzle collection, each with 10 products.
 - **This website.** Real stories (like this one) that link to the things I recommend.
 - **Keep making videos.** I'm past 700 on my storefront, and they keep earning long after I make them.
-- **Keep learning.** I'll keep working through Claire's course, a module at a time.
+- **Keep learning.** I'll keep working through Build Past $1k, a module at a time.
+
+You can find the courses and tools I use, with my links and discount code, on my [Creator Tools](/tools/) page.
 
 ![The harbour promenade in Alicante at sunset, with the castle in the distance](/uploads/alicante-harbour-promenade.jpg)
 

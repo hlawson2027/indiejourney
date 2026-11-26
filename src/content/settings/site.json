@@ -42,6 +42,10 @@
       "url": "/business/"
     },
     {
+      "label": "Creator Tools",
+      "url": "/tools/"
+    },
+    {
       "label": "Shop",
       "url": "/shop/"
     }
