@@ -88,7 +88,7 @@ I promised real numbers, so here they are. This tracker shows where we are right
 
 **2. Bring in $4,000 a month.** To live in Spain as non-EU residents we need a visa, and that means showing a steady monthly income. The common route for people who aren't working for a Spanish employer is the non-lucrative visa. For 2026 it asks for **€2,400 a month (about $2,640)** for the main applicant plus **€600 (about $660)** for a spouse, so **€3,000 a month (about $3,300)** for the two of us. Our target is **$4,000 a month (about €3,640)**, so we're comfortably above the minimum with a cushion for real life and for exchange-rate swings.
 
-**3. Grow our passive income.** This is where all those extra jobs come in. Right now our Amazon affiliate income brings in **about $800 a month (about €730)**. That's 20% of the way to our $4,000 goal, from something I built in my spare time. Next I'm growing:
+**3. Grow our passive income.** This is where all those extra jobs come in. Right now our Amazon income, from my storefront and affiliate links, brings in **about $666 a month (about €605)**, based on our last 30 days. That's about 17% of the way to our $4,000 goal, from something I built in my spare time. Next I'm growing:
 
 - **Walmart** affiliate finds
 - **Zazzle**, my art and design store
