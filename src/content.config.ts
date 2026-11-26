@@ -127,4 +127,17 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { articles, lookbooks, products, books, stores, categories, pages };
+const idealists = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/idealists' }),
+  schema: z.object({
+    title: z.string(),
+    section: z.string().optional().default('More Lists'),
+    link: z.string().url(),
+    image: img,
+    image_url: z.string().url().optional().nullable().or(z.literal('')),
+    order: z.coerce.number().optional().default(100),
+    hidden: z.boolean().optional().default(false),
+  }),
+});
+
+export const collections = { idealists, articles, lookbooks, products, books, stores, categories, pages };
