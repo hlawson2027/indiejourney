@@ -106,6 +106,10 @@
           "url": "/shop/zazzle/"
         },
         {
+          "label": "My Etsy Shop",
+          "url": "https://kindredtailsstudio.etsy.com"
+        },
+        {
           "label": "My Stores",
           "url": "/stores/"
         }
