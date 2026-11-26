@@ -136,8 +136,8 @@
   "newsletter": {
     "kicker": "The Indie Letter",
     "heading": "One good email a week. Finds, stories, no noise.",
-    "text": "",
-    "form_action": "",
+    "text": "Every Friday: the week's new stories, my favourite Amazon and Walmart finds, and a little of the journey to Spain.",
+    "form_action": "https://app.kit.com/forms/10248095/subscriptions",
     "email_field": "email_address"
   },
   "disclosures": {
