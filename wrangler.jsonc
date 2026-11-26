@@ -3,9 +3,22 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "indiejourney",
   "compatibility_date": "2026-11-01",
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "myindiejourney.com", "custom_domain": true },
+    { "pattern": "www.myindiejourney.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
+  },
+  "env": {
+    // Private preview site with drafts. Protected by Cloudflare Access.
+    "preview": {
+      "name": "indiejourney-preview",
+      "workers_dev": false,
+      "routes": [{ "pattern": "preview.myindiejourney.com", "custom_domain": true }]
+    }
   }
 }
