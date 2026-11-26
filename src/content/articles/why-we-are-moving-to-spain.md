@@ -84,7 +84,7 @@ Slower doesn't mean sitting still. My best friend lives in Portugal, and I can't
 
 I promised real numbers, so here they are. The tracker at the top of this post shows where we are right now, and I update it every week.
 
-**1. Buy our house outright.** We're **50% of the way there** on our house savings. When the time comes, we'll sell our rental properties in the UK and Chicago and put that investment into the house too. Because homes in Spain cost so much less than in New York, this goal is actually within reach.
+**1. Buy our house outright.** We're **50% of the way there** on our house savings. When the time comes, we're hoping to sell everything, including our rental properties in the UK and Chicago, and put it all into the house. Because homes in Spain cost so much less than in New York, this goal is actually within reach.
 
 **2. Bring in €3,300 (about $3,630) a month.** To live in Spain as non-EU residents we need a visa, and that means showing a steady monthly income. The common route for people who aren't working for a Spanish employer is the non-lucrative visa. For 2026 it asks for **€2,400 a month (about $2,640)** for the main applicant plus **€600 (about $660)** for a spouse, so **€3,000 a month (about $3,300)** for the two of us. Our goal is **€3,300 a month (about $3,630)**, a little above the minimum so we have a cushion for exchange-rate swings and real life. It also lines up with what a couple actually spends in Alicante (about €2,000 to €2,900 a month), and once our house is paid off there's no rent or mortgage coming out of it.
 
