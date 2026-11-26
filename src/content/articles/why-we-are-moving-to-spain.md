@@ -11,7 +11,7 @@ seo:
   title: "Why We're Moving to Spain: The Dream, the Numbers and the Plan | The Indie Journey"
   description: "Why our family is planning to retire to Spain: cost of living in Alicante compared to New York, sunshine compared to England, the visa income we need, our house savings, and how affiliate income is getting us there."
 ---
-Welcome to The Spain Diaries. If you're new here, this is the place to start, because everything else on this site, every side job, every story and every shop, points back to one dream: **my husband and I are moving to Spain.**
+Welcome to The Spain Diaries. If you're new here, this is the place to start, because everything else on this site, every side job, every story and every shop, points back to one dream: **my husband Gavin and I are moving to Spain.**
 
 We're not there yet. This is the story of how we're getting there, with the real numbers, the wins and the slow bits. I hope you'll come along for the journey.
 
@@ -35,9 +35,9 @@ After a lifetime of drizzle and a few New York winters, I'm ready to swap the um
 
 This is the big one. I'm giving the euro amounts and the dollar conversions so you can see the real numbers (I've used about **$1.10 to €1**, the rate in late November 2026, so the dollar figures will move a little with the exchange rate).
 
-In Alicante, everyday living costs for a family of four come to about **€2,770 a month (about $3,050)** before rent, and a three-bedroom apartment in the city centre rents for about **€1,421 a month (about $1,560)**. That's roughly **€4,190, or about $4,600 a month** all in. A family in New York City spends about **$9,200 a month**, rent included. Groceries, eating out and everyday bills all come in well under what we pay now.
+It'll be just the two of us, Gavin and me, since our daughter Callie will be at university in England. For a couple in Alicante, living costs come to about **€2,000 to €2,900 a month (about $2,200 to $3,200), rent included**. That's roughly what a one-bedroom apartment *rents* for on its own in New York City (about **$2,700 a month**). And once our house is paid off, there's no rent at all. Groceries, eating out and everyday bills all come in well under what we pay now.
 
-In plain terms, **our money goes about twice as far.** The same budget that keeps us afloat in New York could give us a genuinely comfortable life in Spain, with room left over for travel and the people we love.
+In plain terms, **our money goes much, much further.** The same budget that keeps us afloat in New York could give us a genuinely comfortable life in Spain, with room left over for travel and the people we love.
 
 ### Houses are so much cheaper
 
@@ -49,7 +49,7 @@ From Spain, so much of Europe is a short, cheap flight or a train ride away. Lis
 
 ### Being closer to family
 
-This matters more to me than the sunshine. Our daughter is going to university in England, and much of our family is there too. From New York, seeing them means a long, expensive trip. From Spain, England is a two- or three-hour flight. We'll be able to pop over for a birthday, or have our daughter come down for the holidays without it being a huge production.
+This matters more to me than the sunshine. Callie is going to university in England, and much of our family is there too. From New York, seeing them means a long, expensive trip. From Spain, England is a two- or three-hour flight. We'll be able to pop over for a birthday, or have Callie come down for the holidays without it being a huge production.
 
 ### The laid-back life
 
@@ -58,7 +58,7 @@ And then there's the life itself. The pace we've been dreaming of:
 - **Afternoon naps.** The siesta is real, and I fully intend to take part.
 - **Pool time.** Long, lazy afternoons with a book and nowhere to be.
 - **Snack time.** Tapas, olives, fresh bread and a cold drink in the shade.
-- **Quality time.** Long dinners with my husband, visits from our daughter, and our cat Jinx finding the sunniest spot in the house.
+- **Quality time.** Long dinners with Gavin, visits from Callie, and our cat Jinx finding the sunniest spot in the house.
 
 After 20-plus years of hustling, we want a life that's slower and fuller.
 
@@ -88,4 +88,4 @@ If you want the backstory first, read [From Lancaster to Long Island (and Someda
 
 *¡Hasta pronto!*
 
-<small>Cost of living and sunshine figures are averages from public comparison sites (Numbeo, Livingcost) and climate records. Dollar amounts are converted at about $1.10 to €1 and will change with the exchange rate. Figures vary by area and year. Visa requirements change, so always check the current rules with the Spanish consulate or an immigration lawyer. As an Amazon Associate I earn from qualifying purchases.</small>
+<small>Cost of living and sunshine figures are averages from public comparison sites (Freenance, Livingcost) and climate records. Dollar amounts are converted at about $1.10 to €1 and will change with the exchange rate. Figures vary by area and year. Visa requirements change, so always check the current rules with the Spanish consulate or an immigration lawyer. As an Amazon Associate I earn from qualifying purchases.</small>
