@@ -86,9 +86,9 @@ I promised real numbers, so here they are. This tracker shows where we are right
 
 **1. Buy our house outright.** We're **50% of the way there** on our house savings. When the time comes, we'll sell our rental properties in the UK and Chicago and put that investment into the house too. Because homes in Spain cost so much less than in New York, this goal is actually within reach.
 
-**2. Bring in $4,000 a month.** To live in Spain as non-EU residents we need a visa, and that means showing a steady monthly income. The common route for people who aren't working for a Spanish employer is the non-lucrative visa. For 2026 it asks for **€2,400 a month (about $2,640)** for the main applicant plus **€600 (about $660)** for a spouse, so **€3,000 a month (about $3,300)** for the two of us. Our target is **$4,000 a month (about €3,640)**, so we're comfortably above the minimum with a cushion for real life and for exchange-rate swings.
+**2. Bring in €3,000 (about $3,300) a month.** To live in Spain as non-EU residents we need a visa, and that means showing a steady monthly income. The common route for people who aren't working for a Spanish employer is the non-lucrative visa. For 2026 it asks for **€2,400 a month (about $2,640)** for the main applicant plus **€600 (about $660)** for a spouse, so **€3,000 a month (about $3,300)** for the two of us. That's our monthly goal. It also lines up with what a couple actually spends in Alicante (about €2,000 to €2,900 a month), and once our house is paid off there's no rent or mortgage coming out of it.
 
-**3. Grow our passive income.** This is where all those extra jobs come in. Our Amazon income, from my storefront and affiliate links, brought in **about $840 in October (about €764)**, our last full month. That's about 21% of the way to our $4,000 goal, from something I built in my spare time. Next I'm growing:
+**3. Grow our passive income.** This is where all those extra jobs come in. Our Amazon income, from my storefront and affiliate links, brought in **about $840 in October (about €764)**, our last full month. That's about 25% of the way to our €3,000 (about $3,300) monthly goal, from something I built in my spare time. Next I'm growing:
 
 - **Walmart** affiliate finds
 - **Zazzle**, my art and design store
