@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "At Home Gym Gear"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/1MA1Q9JV1IHKM?tag=theindiejourn-20"

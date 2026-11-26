@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Christmas Gifts for Fitness Lovers"
 section: "Gift Guides"
 link: "https://www.amazon.com/shop/theindiejourn/list/3IJ3IKPILQ11E?tag=theindiejourn-20"

@@ -131,6 +131,7 @@ const idealists = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/idealists' }),
   schema: z.object({
     title: z.string(),
+    store: z.string().optional().default('Amazon'),
     section: z.string().optional().default('More Lists'),
     link: z.string().url(),
     image: img,

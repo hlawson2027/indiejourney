@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Christmas Gifts for Moms"
 section: "Gift Guides"
 link: "https://www.amazon.com/shop/theindiejourn/list/1RYLXWR96JK50?tag=theindiejourn-20"

@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Old Knees Need a Bit of Help?"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/7JKNAMAK3XLE?tag=theindiejourn-20"

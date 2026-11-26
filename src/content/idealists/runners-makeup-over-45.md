@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Runners Makeup Over 45"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/1DE39XGT7MF7Z?tag=theindiejourn-20"

@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Are You New to Running?"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/2NA0USWNZLLTW?tag=theindiejourn-20"

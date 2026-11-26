@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Everyday Boots I'm Loving"
 section: "Style"
 link: "https://www.amazon.com/shop/theindiejourn/list/1C3180MJNHBLS?tag=theindiejourn-20"

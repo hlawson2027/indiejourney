@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Half Marathon Essentials"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/2XO8CBZ6EQN8C?tag=theindiejourn-20"

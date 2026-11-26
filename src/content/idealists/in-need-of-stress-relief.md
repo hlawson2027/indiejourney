@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "In Need of Stress Relief?"
 section: "Home & Everyday"
 link: "https://www.amazon.com/shop/theindiejourn/list/1874FJCAW9GMN?tag=theindiejourn-20"

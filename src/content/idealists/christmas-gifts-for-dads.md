@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Christmas Gifts for Dads"
 section: "Gift Guides"
 link: "https://www.amazon.com/shop/theindiejourn/list/1YDUACJTMIDPV?tag=theindiejourn-20"

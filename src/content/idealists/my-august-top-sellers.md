@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "My August Top Sellers"
 section: "My Top Sellers"
 link: "https://www.amazon.com/shop/theindiejourn/list/1R9C9KKO97IWK?tag=theindiejourn-20"

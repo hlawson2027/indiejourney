@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Recovery & Workout Wear"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/3A225D97SH78K?tag=theindiejourn-20"

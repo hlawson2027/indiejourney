@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "5km Runners Starter Kit"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/36AFN7CHCC722?tag=theindiejourn-20"

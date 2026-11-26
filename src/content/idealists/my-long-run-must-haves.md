@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "My Long Run Must-Haves"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/2ZCZLAWVV4VL?tag=theindiejourn-20"

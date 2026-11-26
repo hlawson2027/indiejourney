@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Black Friday Deals Over $100"
 section: "Gift Guides"
 link: "https://www.amazon.com/shop/theindiejourn/list/5I8E7FJM3TQV?tag=theindiejourn-20"

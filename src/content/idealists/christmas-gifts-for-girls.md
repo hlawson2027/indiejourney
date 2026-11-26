@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Christmas Gifts for Girls"
 section: "Gift Guides"
 link: "https://www.amazon.com/shop/theindiejourn/list/25BDHBOMIGQIK?tag=theindiejourn-20"

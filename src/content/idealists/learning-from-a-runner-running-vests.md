@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Learning from a Runner: Running Vests"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/2TMCBE7MWNT9R?tag=theindiejourn-20"

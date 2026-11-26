@@ -252,7 +252,7 @@ content:
         default: false
 
   - name: idealists
-    label: Amazon Idea Lists
+    label: Amazon Lists & Zazzle Collections
     type: collection
     path: src/content/idealists
     filename:
@@ -260,7 +260,7 @@ content:
       field: create
     view:
       primary: title
-      fields: [title, section, order]
+      fields: [title, store, section, order]
       default:
         sort: order
         order: asc
@@ -269,16 +269,21 @@ content:
         label: List name
         type: string
         required: true
-      - name: section
-        label: Section on the Amazon page
+      - name: store
+        label: Store
         type: select
         options:
-          values: [Gift Guides, Running & Fitness, Style, Home & Everyday, My Top Sellers]
+          values: [Amazon, Zazzle]
+      - name: section
+        label: Section on the store page
+        type: select
+        options:
+          values: [Gift Guides, Holiday & Gifts, Running & Fitness, Weddings, Travel, Style, Home & Everyday, Home & Art, Stationery, My Top Sellers]
       - name: link
-        label: Idea list link
+        label: List or collection link
         type: string
         required: true
-        description: "Your list link from your storefront, e.g. https://www.amazon.com/shop/theindiejourn/list/…?tag=theindiejourn-20"
+        description: "Amazon idea list link (…/shop/theindiejourn/list/…?tag=theindiejourn-20) or Zazzle collection link (…zazzle.com/collections/…)"
       - name: image_url
         label: Cover image link
         type: string

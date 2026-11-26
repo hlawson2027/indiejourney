@@ -12,11 +12,13 @@ const retailers = [...new Set(all.map((p) => p.data.retailer))].sort();
 const items = (retailer ? all.filter((p) => p.data.retailer === retailer) : all).sort(
   (a, b) => Number(b.data.featured) - Number(a.data.featured)
 );
-const title = retailer ? `${retailer} Finds` : 'Shop My Finds';
+const title = retailer === 'Zazzle' ? 'My Zazzle Store' : retailer ? `${retailer} Finds` : 'Shop My Finds';
 const path = Astro.url.pathname;
 const isAmazon = retailer === 'Amazon';
-const lists = isAmazon ? (await getCollection('idealists', ({ data }) => !data.hidden)).sort((a, b) => a.data.order - b.data.order) : [];
-const ORDER = ['Gift Guides', 'Running & Fitness', 'Style', 'Home & Everyday', 'My Top Sellers'];
+const lists = retailer ? (await getCollection('idealists', ({ data }) => !data.hidden && data.store === retailer)).sort((a, b) => a.data.order - b.data.order) : [];
+const hasLists = lists.length > 0;
+const listLabel = isAmazon ? 'Idea list' : 'Collection';
+const ORDER = ['Gift Guides', 'Holiday & Gifts', 'Running & Fitness', 'Weddings', 'Travel', 'Style', 'Home & Everyday', 'Home & Art', 'Stationery', 'My Top Sellers'];
 const sections = [...new Set(lists.map((l) => l.data.section))].sort((a, b) => (ORDER.indexOf(a) + 1 || 99) - (ORDER.indexOf(b) + 1 || 99));
 const storefront = 'https://www.amazon.com/shop/theindiejourn?tag=theindiejourn-20';
 ---
@@ -33,25 +35,25 @@ const storefront = 'https://www.amazon.com/shop/theindiejourn?tag=theindiejourn-
       <a href="/stores/">My Stores</a>
     </nav>
     <p class="disclosure-top" style="text-align:center">{settings.disclosures.affiliate.replace('This post', 'This page')} {retailer === 'Amazon' ? settings.disclosures.amazon : ''}</p>
-    {isAmazon && sections.map((sec) => (
+    {hasLists && sections.map((sec) => (
       <section class="section" style="margin-top:48px">
         <div class="sec"><h2>{sec}</h2><span class="rule"></span></div>
         <div class="products lists">
           {lists.filter((l) => l.data.section === sec).map((l) => (
             <a class="pcard" href={l.data.link} rel="sponsored noopener" target="_blank">
               <span class="media r-11 ext"><img src={l.data.image_url} alt="" loading="lazy" decoding="async" width="550" height="550" referrerpolicy="no-referrer" /></span>
-              <p class="retailer">Idea list</p>
+              <p class="retailer">{listLabel}</p>
               <p class="name">{l.data.title}</p>
-              <p class="cta">Shop the list <span aria-hidden="true">→</span><span class="sr-only"> on Amazon (opens in a new tab)</span></p>
+              <p class="cta">{isAmazon ? 'Shop the list' : 'Shop the collection'} <span aria-hidden="true">→</span><span class="sr-only"> on {retailer} (opens in a new tab)</span></p>
             </a>
           ))}
         </div>
       </section>
     ))}
-    {isAmazon && (
-      <div style="text-align:center;margin:48px 0 8px"><a class="btn solid" href={storefront} rel="sponsored noopener" target="_blank">Visit my full Amazon storefront</a></div>
+    {hasLists && (
+      <div style="text-align:center;margin:48px 0 8px"><a class="btn solid" href={isAmazon ? storefront : 'https://www.zazzle.com/store/discover_art'} rel="sponsored noopener" target="_blank">{isAmazon ? 'Visit my full Amazon storefront' : 'Visit my full Zazzle store'}</a></div>
     )}
-    {items.length > 0 && isAmazon && <div class="sec section"><h2>Single finds</h2><span class="rule"></span></div>}
+    {items.length > 0 && hasLists && <div class="sec section"><h2>{isAmazon ? 'Single finds' : 'Favorite designs'}</h2><span class="rule"></span></div>}
     {items.length ? <div class="products">{items.map((p) => <ProductCard product={p} />)}</div> : !isAmazon && <p class="empty">New finds coming soon.</p>}
   </div>
 </Base>

@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Cozy Sweater & Knitwear Finds"
 section: "Style"
 link: "https://www.amazon.com/shop/theindiejourn/list/20396KITAHIOC?tag=theindiejourn-20"

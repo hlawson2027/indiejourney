@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Useful Kitchen Tools"
 section: "Home & Everyday"
 link: "https://www.amazon.com/shop/theindiejourn/list/1F8JIOOTN67IZ?tag=theindiejourn-20"

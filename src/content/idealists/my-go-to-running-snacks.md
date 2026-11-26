@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "My Go-To Running Snacks"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/3LFJY47BNISQO?tag=theindiejourn-20"

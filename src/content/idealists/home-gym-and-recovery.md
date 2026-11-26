@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Home Gym & Recovery"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/25XFRNWJK8XCY?tag=theindiejourn-20"

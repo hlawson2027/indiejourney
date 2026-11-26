@@ -1,4 +1,5 @@
 ---
+store: "Amazon"
 title: "Under $25 Running Favorites"
 section: "Running & Fitness"
 link: "https://www.amazon.com/shop/theindiejourn/list/1ZR4CUI4PMOX9?tag=theindiejourn-20"
