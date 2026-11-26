@@ -1,5 +1,6 @@
 // Turns simple things typed in the dashboard editor into rich blocks:
 //   • a paragraph that is just  [[product: Product name]]  → a shoppable product card
+//   • a paragraph that is just  [[lists: list-one, list-two]]  → a grid of shoppable list/collection cards
 //   • a paragraph that is just a YouTube link            → a fast, click-to-play video
 //   • images uploaded into the article body (/uploads/…)  → optimized by Astro
 import fs from 'node:fs';
@@ -10,6 +11,7 @@ import { visit } from 'unist-util-visit';
 const ROOT = process.cwd();
 const UPLOADS = path.join(ROOT, 'src/assets/uploads');
 const PRODUCTS = path.join(ROOT, 'src/content/products');
+const LISTS = path.join(ROOT, 'src/content/idealists');
 
 const esc = (s = '') =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -69,7 +71,7 @@ export default function remarkIndie() {
 
       const prod = text.match(/^\[\[\s*product\s*:\s*(.+?)\s*\]\]$/i);
       if (prod) {
-        const slug = prod[1].toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        const slug = prod[1].replace(/['’]/g, '').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         const p = readProduct(slug, prod[1]);
         if (!p) {
           parent.children.splice(index, 1);
@@ -98,6 +100,21 @@ export default function remarkIndie() {
         });
         parent.children.splice(index, 1, ...nodes);
         return index + nodes.length;
+      }
+
+      const lists = text.match(/^\[\[\s*lists?\s*:\s*(.+?)\s*\]\]$/i);
+      if (lists) {
+        const cards = lists[1].split(',').map((x) => x.trim()).filter(Boolean).map((slug) => {
+          const f = path.join(LISTS, `${slug}.md`);
+          if (!fs.existsSync(f)) return '';
+          const l = frontmatter(f);
+          if (!l || l.hidden) return '';
+          const store = l.store || 'Amazon';
+          const label = store === 'Amazon' ? 'Idea list' : 'Collection';
+          return `<a class="pcard" href="${esc(l.link)}" rel="sponsored noopener" target="_blank"><span class="media r-11 ext"><img src="${esc(l.image_url || '')}" alt="" loading="lazy" decoding="async" width="550" height="550" referrerpolicy="no-referrer"></span><p class="retailer">${esc(store)} ${label.toLowerCase()}</p><p class="name">${esc(l.title)}</p><p class="cta">Shop the ${store === 'Amazon' ? 'list' : 'collection'} →</p></a>`;
+        }).join('');
+        parent.children.splice(index, 1, { type: 'html', value: cards ? `<div class="products lists inline-lists">${cards}</div>` : '' });
+        return index + 1;
       }
 
       const id = youtubeId(text);

@@ -1,17 +1,11 @@
 {
-  "lead": "src/content/articles/why-i-stopped-waiting-for-permission.md",
+  "lead": "src/content/articles/from-lancaster-to-long-island-and-someday-spain.md",
   "side_stories": [
-    "src/content/articles/my-first-month-in-andalusia.md",
-    "src/content/articles/the-200-dollar-reading-nook-refresh.md"
+    "src/content/articles/chicago-marathon-in-48-hours.md",
+    "src/content/articles/runners-holiday-gift-guide.md"
   ],
   "latest_count": 4,
   "sections": [
-    {
-      "type": "category_row",
-      "title": "The Spain Diaries",
-      "category": "src/content/categories/spain-diaries.md",
-      "count": 4
-    },
     {
       "type": "shop_band",
       "kicker": "Shop",
@@ -26,13 +20,15 @@
       "count": 5
     },
     {
-      "type": "lookbook_feature",
-      "lookbook": "src/content/lookbooks/warm-minimalist-living-room.md"
+      "type": "category_row",
+      "title": "Running Adventures",
+      "category": "src/content/categories/running-adventures.md",
+      "count": 4
     },
     {
       "type": "two_categories",
-      "left": "src/content/categories/running-adventures.md",
-      "right": "src/content/categories/landlord-diaries.md"
+      "left": "src/content/categories/home-living.md",
+      "right": "src/content/categories/travel.md"
     },
     {
       "type": "books_and_businesses",
