@@ -36,6 +36,7 @@ const articles = defineCollection({
     video: z.string().optional().nullable(),
     products: refs,
     featured: z.boolean().optional().default(false),
+    pinned: z.boolean().optional().default(false),
     seo,
   }),
 });

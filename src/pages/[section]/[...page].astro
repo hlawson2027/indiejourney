@@ -22,7 +22,8 @@ export const getStaticPaths = (async ({ paginate }) => {
   const out: any[] = [];
   for (const c of categories) {
     claim(c.id, 'category');
-    const items = articles.filter((a) => a.data.category === c.id);
+    const items = articles.filter((a) => a.data.category === c.id)
+      .sort((a, b) => Number(b.data.pinned) - Number(a.data.pinned));
     out.push(...paginate(items, { params: { section: c.id }, props: { kind: 'category', category: c }, pageSize: 24 }));
   }
   for (const p of pages) {
@@ -45,7 +46,7 @@ if (props.kind === 'page') Content = (await render(props.entry)).Content;
       </header>
       {props.page.data.length ? (
         <div class="grid wide">
-          {props.page.data.map((a: any) => <ArticleCard article={a} kicker={props.category.data.title} showExcerpt sizes="(max-width: 760px) 100vw, 380px" />)}
+          {props.page.data.map((a: any) => <ArticleCard article={a} kicker={a.data.pinned ? `${props.category.data.title} · Start here` : props.category.data.title} showExcerpt sizes="(max-width: 760px) 100vw, 380px" />)}
         </div>
       ) : (
         <p class="empty">Stories are on their way.</p>

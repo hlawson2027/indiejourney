@@ -104,6 +104,10 @@ content:
         label: Use as homepage lead if no lead is chosen
         type: boolean
         default: false
+      - name: pinned
+        label: Pin to the top of its category page
+        type: boolean
+        default: false
       - name: updated
         label: Last updated (optional)
         type: date
