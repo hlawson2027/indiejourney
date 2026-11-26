@@ -3,7 +3,7 @@ title: "12 Amazon Finds Living in My Kitchen Right Now"
 excerpt: ""
 category: src/content/categories/home-living.md
 date: 2026-11-10
-draft: false
+draft: true
 cover: ""
 products:
   - src/content/products/heyi-home-kitchen-rug-set.md
