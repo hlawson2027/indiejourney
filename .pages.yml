@@ -419,6 +419,9 @@ content:
         label: Link
         type: string
         required: true
+      - name: pinterest
+        label: Pinterest profile (optional)
+        type: string
       - name: image
         label: Logo or banner
         type: image

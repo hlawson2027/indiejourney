@@ -109,6 +109,7 @@ const stores = defineCollection({
     kind: z.string().optional().default('Store'),
     tagline: z.string().optional().nullable(),
     url: z.string().url(),
+    pinterest: z.string().url().optional().nullable(),
     image: img,
     order: z.coerce.number().optional().default(100),
   }),
