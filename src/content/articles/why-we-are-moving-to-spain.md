@@ -9,7 +9,7 @@ cover: "/uploads/story-why-spain.jpg"
 cover_alt: "Why we're moving to Spain: the dream, the numbers, the plan"
 seo:
   title: "Why We're Moving to Spain: The Dream, the Numbers and the Plan | The Indie Journey"
-  description: "Why our family is planning to retire to Spain: cost of living compared to New York, sunshine compared to England, the visa income we need, our house savings, and how affiliate income is getting us there."
+  description: "Why our family is planning to retire to Spain: cost of living in Alicante compared to New York, sunshine compared to England, the visa income we need, our house savings, and how affiliate income is getting us there."
 ---
 Welcome to The Spain Diaries. If you're new here, this is the place to start, because everything else on this site, every side job, every story and every shop, points back to one dream: **my husband and I are moving to Spain.**
 
@@ -27,15 +27,17 @@ It's also the honest answer to a question I get a lot: *why do you have so many 
 
 ### The weather (compared to England, it's not even close)
 
-I grew up in England, so I know grey. London gets roughly **1,400 hours of sunshine a year**. Málaga, on the Costa del Sol, gets around **2,900 to 3,000**, about twice as much. In January, a typical day in Málaga reaches about 17°C, while London is around 8°C.
+We're looking at the **Alicante area on the Costa Blanca**, and I grew up in England, so I know grey. London gets roughly **1,400 hours of sunshine a year**. Alicante gets around **2,800 to 2,900**, about twice as much. Even in January, Alicante's daytime highs are around **16 to 17°C (about 61 to 63°F)**, while London sits at around 8°C (46°F).
 
 After a lifetime of drizzle and a few New York winters, I'm ready to swap the umbrella for sunglasses.
 
 ### Life costs a lot less than in New York
 
-This is the big one. Using Málaga as an example, cost-of-living comparisons put a family's monthly costs there at **about $4,000, compared with about $9,200 in New York City**, and family rent at **around $1,700 compared with $4,400**. Groceries, eating out and everyday bills all come in well under what we pay now.
+This is the big one. I'm giving the euro amounts and the dollar conversions so you can see the real numbers (I've used about **$1.10 to €1**, the rate in late November 2026, so the dollar figures will move a little with the exchange rate).
 
-In plain terms, **our money goes more than twice as far.** The same budget that keeps us afloat in New York could give us a genuinely comfortable life in Spain, with room left over for travel and the people we love.
+In Alicante, everyday living costs for a family of four come to about **€2,770 a month (about $3,050)** before rent, and a three-bedroom apartment in the city centre rents for about **€1,421 a month (about $1,560)**. That's roughly **€4,190, or about $4,600 a month** all in. A family in New York City spends about **$9,200 a month**, rent included. Groceries, eating out and everyday bills all come in well under what we pay now.
+
+In plain terms, **our money goes about twice as far.** The same budget that keeps us afloat in New York could give us a genuinely comfortable life in Spain, with room left over for travel and the people we love.
 
 ### Houses are so much cheaper
 
@@ -66,9 +68,9 @@ I promised real numbers, so here they are.
 
 **1. Buy our house outright.** We're **50% of the way there** on our house savings. Because homes in Spain cost so much less than in New York, this goal is actually within reach.
 
-**2. Bring in $4,000 a month.** To live in Spain as non-EU residents we need a visa, and that means showing a steady monthly income. The common route for people who aren't working for a Spanish employer is the non-lucrative visa, which for 2026 asks a couple to show about **€3,000 a month**. Our target is **$4,000 a month**, so we're comfortably above the minimum with a cushion for real life.
+**2. Bring in $4,000 a month.** To live in Spain as non-EU residents we need a visa, and that means showing a steady monthly income. The common route for people who aren't working for a Spanish employer is the non-lucrative visa. For 2026 it asks for **€2,400 a month (about $2,640)** for the main applicant plus **€600 (about $660)** for a spouse, so **€3,000 a month (about $3,300)** for the two of us. Our target is **$4,000 a month (about €3,640)**, so we're comfortably above the minimum with a cushion for real life and for exchange-rate swings.
 
-**3. Grow our passive income.** This is where all those extra jobs come in. Right now our Amazon affiliate income brings in **about $800 a month**. That's 20% of the way to our $4,000 goal, from something I built in my spare time. Next I'm growing:
+**3. Grow our passive income.** This is where all those extra jobs come in. Right now our Amazon affiliate income brings in **about $800 a month (about €730)**. That's 20% of the way to our $4,000 goal, from something I built in my spare time. Next I'm growing:
 
 - **Walmart** affiliate finds
 - **Zazzle**, my art and design store
@@ -86,4 +88,4 @@ If you want the backstory first, read [From Lancaster to Long Island (and Someda
 
 *¡Hasta pronto!*
 
-<small>Cost of living and sunshine figures are averages from public comparison sites and climate records and will vary by city and year. Visa requirements change, so always check the current rules with the Spanish consulate or an immigration lawyer. As an Amazon Associate I earn from qualifying purchases.</small>
+<small>Cost of living and sunshine figures are averages from public comparison sites (Numbeo, Livingcost) and climate records. Dollar amounts are converted at about $1.10 to €1 and will change with the exchange rate. Figures vary by area and year. Visa requirements change, so always check the current rules with the Spanish consulate or an immigration lawyer. As an Amazon Associate I earn from qualifying purchases.</small>
