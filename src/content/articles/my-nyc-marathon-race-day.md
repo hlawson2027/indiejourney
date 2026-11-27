@@ -98,6 +98,14 @@ Honestly? I'm glad it worked out that way. No bag meant no queue at the end, and
 
 Getting home was the hardest part. Getting an Uber or a cab to Penn Station was a nightmare, so I had to walk for 30 minutes. Not what you want after running a marathon.
 
+## A day off? Nope
+
+You'd think I'd have taken a day off after that. Nope. The next day I was on a plane to Las Vegas for the SEMA Show, one of the biggest trade shows of the year, on very tired legs and some very swollen feet.
+
+![My left foot, swollen the day after the marathon](/uploads/nyc-2026-img_8156.jpg)
+
+![Both feet swollen after the race](/uploads/nyc-2026-img_8150.jpg)
+
 ## What I learned
 
 - **Stay close to the start if you can.** It made race morning easy, even with a 30-minute Uber.
@@ -105,5 +113,6 @@ Getting home was the hardest part. Getting an Uber or a cab to Penn Station was 
 - **Bring a cap and respect the sun.** Even in November, the afternoon can be warm.
 - **Choose bag check or poncho before race day.** Look out for NYRR's option when you confirm your entry. No bag means no queue.
 - **Plan your way home.** Cabs and Ubers near the finish are hard to get. Be ready to walk.
+- **Plan some recovery.** Two marathons in a month and a trade show the next day is a lot. Put your feet up when you can.
 
 Next up? I've already qualified for the 2027 NYC Marathon through 9+1 again.
