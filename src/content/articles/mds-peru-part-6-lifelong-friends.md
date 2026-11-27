@@ -102,7 +102,7 @@ My feelings about that are mixed. Those 20 years of hard work have built a great
 
 But I came home knowing I want more people like this in my life.
 
-And yes, Tugce did message me back. Now we message nearly every day, often lots of times a day. There are plenty more Tugce and Zuzanna stories to come. They're lifelong friends now.
+And yes, Tugce did message me back. Now we message nearly every day, often lots of times a day, and Zuzanna and I message often too. There are plenty more Tugce and Zuzanna stories to come. They're lifelong friends now.
 
 *The End … for now.*
 
