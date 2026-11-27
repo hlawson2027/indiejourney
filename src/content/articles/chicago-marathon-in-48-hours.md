@@ -5,8 +5,8 @@ category: src/content/categories/running-adventures.md
 date: 2026-10-12
 draft: false
 featured: false
-cover: "/uploads/story-chicago-48-hours.jpg"
-cover_alt: "26.2: Chicago in 48 hours, solo, for charity"
+cover: "/uploads/chicago-2026-img_7328.jpg"
+cover_alt: "Me with my 2026 Chicago Marathon medal"
 products:
   - src/content/products/water-buffalo-quiver-running-vest.md
   - src/content/products/oiuyos-running-hydration-vest.md
