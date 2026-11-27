@@ -55,15 +55,70 @@ My alarm went off before 5 a.m. Here's what I wore and carried:
 
 I tried to go a bit more lightweight than usual, and I'd recommend that for any destination race. Carry what you need, and nothing you'll resent at mile 20.
 
+![My race-day outfit in the hotel mirror, knee straps on](/uploads/chicago-2026-img_7282.jpg)
+
+![Bib K70568 in hand at the hotel](/uploads/chicago-2026-img_7271.jpg)
+
 In the end I took an Uber instead of the train, got dropped off a little way from the road closures, and enjoyed a quiet 15-minute walk through Chicago in the dark. It was ten to six, and the race didn't start until 8:30, so there was plenty of time. I checked my bag and headed to Corral K.
 
 ## The race: flat, they said
 
-Everyone tells you Chicago is flat and fast. I kept finding hills. And it was hot, unbelievably hot for October.
+> **How hot was it?**
+>
+> - Organisers put the race on a **yellow alert**, their warning for "less-than-ideal" conditions, which means slow down and be ready for things to get worse.
+> - The forecast high was about **73°F (23°C)**. A normal October 11 in Chicago tops out around 64°F, and ideal marathon weather is closer to 50°F.
+> - It was around 60°F at the start and kept climbing all morning, with full sun and barely any shade.
 
-With about 8 km to go I was tired and it was taking me a long time, but I was still going. That's the thing about marathons: you don't have to feel good, you just have to keep moving.
+![Grant Park on race morning with the Chicago skyline](/uploads/chicago-2026-img_7288.jpg)
 
-And I finished. Chicago Marathon complete.
+![In Corral K with the skyline behind me](/uploads/chicago-2026-img_7291.jpg)
+
+![Waiting in the corral](/uploads/chicago-2026-img_7300.jpg)
+
+![The 4:10 pacer sign ahead of us at the start](/uploads/chicago-2026-img_7303.jpg)
+
+About ten minutes after the start, my left foot was suddenly killing me. Not a niggle: proper pain, the kind where you think you need to go to hospital. I'd never felt anything like it before. I was ready to quit, and I don't quit.
+
+I pulled over to the side and retied my laces. That gave me a bit of relief, but it still hurt, and I needed a new plan.
+
+I'd planned not to listen to music until after the first half marathon. That plan went straight out of the window. I needed it now, to block out the pain. So music on, and I carried on, slowly.
+
+Later in the race I got chatting to a man who'd had exactly the same horrific foot pain, which he'd never had before either, at exactly the same spot: under the bridge right at the start, which was like a rave. Two of us, same pain, same place. It made me wonder whether it was something about the road surface there.
+
+## The heat
+
+The first 10 km were horrible. The heat was unbelievable. People were throwing up around me, and a medic team ran past. That was my wake-up call: slow down, or I'll be the one who needs a medic.
+
+The crowds were brilliant the whole way. Firefighters came out and hosed us down, and people were handing out ice, which was amazing.
+
+My face was very red, so I asked someone in the crowd if I could have their hat. They gave it to me, and that black cap stayed on for the rest of the race.
+
+Then I remembered what I'd learned in Peru: [in the desert](/stories/mds-peru-part-1-looking-for-my-limit/), you have to bring your body temperature down, not just drink water. So I filled the hat with water and poured it over my head. It helped a lot. Sponges, ice, hoses, hat: anything to stay cool.
+
+![Wearing the cap a spectator gave me, on the course](/uploads/chicago-2026-img_7313.jpg)
+
+![Sponge in hand, trying to stay cool](/uploads/chicago-2026-img_7314.jpg)
+
+![Runners crossing an old iron bridge with the skyline behind](/uploads/chicago-2026-img_7324.jpg)
+
+![Still smiling in the late miles](/uploads/chicago-2026-img_7320.jpg)
+
+I chatted to different people along the way, and everyone kept finding hills on a course that's supposed to be flat. With about 8 km to go I was tired and it was taking me a long time, but I was still going. That's the thing about marathons: you don't have to feel good, you just have to keep moving.
+
+I'd planned to finish in under five hours. I was a long way off. But I got my medal.
+
+![Me with my 2026 Chicago Marathon medal](/uploads/chicago-2026-img_7328.jpg)
+
+> **My Chicago Marathon in numbers (October 11, 2026)**
+>
+> - **Distance:** 42.99 km on my watch
+> - **Moving time:** 6 hours 34 minutes
+> - **Average pace:** 9:10 per km
+> - **Average heart rate:** 136 bpm
+> - **Calories burned:** 2,362
+> - **My race title on Strava:** "Too bloody hot for me!"
+
+![My Chicago Marathon route and stats](/uploads/chicago-2026-img_8522.jpg)
 
 ## Then straight back to the airport
 
@@ -74,7 +129,8 @@ No lingering, no long brunch. I collected my things and rushed back to the airpo
 - **Build in buffer.** Flights get delayed and rides don't show. If your bib pickup has a deadline, give yourself more time than you think you need.
 - **Have a plan B for race morning.** I switched from the train to an Uber at the last minute, and getting dropped off a short walk from the closures made it easy.
 - **Pack light and smart.** A small running pack with water, snacks and your essentials means you're ready for anything, including a dash to the airport.
-- **Respect the weather.** A "flat, fast" course can still be hot and hard. Adjust your pace and keep drinking.
+- **Respect the weather.** A "flat, fast" course can still be hot and hard. Slow down early, and cool your body down (water over your head, sponges, ice), don't just drink.
+- **Be ready to change the plan.** My foot pain meant music earlier than planned and a slower pace. Finishing mattered more than the time.
 - **Doing it solo is more than OK.** Traveling and racing on your own is a little nerve-wracking and completely worth it.
 
 ## Watch the whole adventure
