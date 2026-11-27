@@ -90,7 +90,7 @@ There were cocktails too, and iced coffees in a little pink café when the sun c
 
 ## The train
 
-Then it was time to leave Paris. We took the train to Geneva to meet Zuzanna, coffee in hand, Tugce scrolling and me watching the green French countryside blur past. The three of us back together, and MDS Crazy Loops in Val d'Isère ahead. That's a story for the next post.
+Then it was time to leave Paris. We took the train to Geneva to meet Zuzanna, coffee in hand, Tugce scrolling and me watching the green French countryside blur past. The three of us back together, and MDS Crazy Loops in Val d'Isère ahead. Read what happened next: [Burgers, a Fake Proposal and 50 km in the Alps](/stories/mds-crazy-loops-val-disere/).
 
 ![Tugce on the train, coffee on the table](/uploads/paris-img_5121.jpg)
 

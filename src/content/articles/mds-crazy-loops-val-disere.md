@@ -1,9 +1,9 @@
 ---
 title: "Burgers, a Fake Proposal and 50 km in the Alps: My MDS Crazy Loops Val d'Isère"
-excerpt: "A girls' road trip to Val d'Isère, a freezing night in the yellow tents, a 24-hour race that didn't go to plan, and my fastest 50K ever. MDS Crazy Loops with Tugce and Zuzanna."
+excerpt: "A girls' road trip to Val d'Isère, a freezing night in the yellow tents, a 24-hour race that didn't go to plan, my fastest 50K ever, and Zuzanna on the podium. MDS Crazy Loops with Tugce and Zuzanna."
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
-draft: true
+draft: false
 cover: "/uploads/loops-img_5226.jpg"
 cover_alt: "Tugce and me grinning at the start of MDS Crazy Loops Val d'Isère"
 seo:
@@ -108,11 +108,14 @@ It was time to call it a night. It was so cold that we slept in the restaurant, 
 
 ![A huge flock of sheep moving past the tents](/uploads/loops-img_5310.jpg)
 
-[What happened the next morning? Did you go back out, or was that the end of your race? Add how many loops you did, too.]
+We didn't go back out the next morning. That was the end of our race: around 12 or 13 loops for me, though I've honestly lost count. Once the event was over, we found a couple of deckchairs in the sun and chilled with a drink.
+
+And the best news of the weekend? Zuzanna came third! We were so proud of her.
 
 > **My MDS Crazy Loops in numbers (August 22, 2026)**
 >
 > - **Start:** 10:32 a.m., Val d'Isère
+> - **Loops:** around 12 or 13
 > - **Distance:** 50.32 km
 > - **Moving time:** 12 hours 54 minutes
 > - **Climbing:** 1,419 m, all at over 2,300 m altitude
@@ -126,6 +129,6 @@ It was time to call it a night. It was so cold that we slept in the restaurant, 
 
 ![Tugce and me celebrating in the Val d'Isère deckchairs](/uploads/loops-img_5316.jpg)
 
-I didn't run for 24 hours. But I ran 50 km in the Alps, looked after my best friend when she needed it, and laughed more than I have in a long time. Some races are about the finish. This one was about the people.
+I didn't run for 24 hours, and I didn't come third. Zuzanna did that. But I ran 50 km in the Alps, looked after my best friend when she needed it, and laughed more than I have in a long time. Some races are about the finish. This one was about the people.
 
 *Want to know what I carry for events like this? See [What I Packed for the MDS 120 Peru](/stories/mds-peru-what-i-packed/).*
