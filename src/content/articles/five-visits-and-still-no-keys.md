@@ -3,8 +3,9 @@ title: "My Tenant Said They Could Be Out by the End of the Week. Five Visits Lat
 excerpt: "A pest-control appointment, a five-day notice nobody could deliver, and five unanswered visits. What being a landlord in Illinois looks like when the rent stops coming in."
 category: src/content/categories/landlord-diaries.md
 date: 2026-11-27
-draft: true
-cover: ""
+draft: false
+cover: "/uploads/story-five-visits-no-keys.jpg"
+cover_alt: "A key illustration: Five visits and still no keys"
 seo:
   title: "What Happens When a Tenant Stops Paying Rent in Illinois: A Landlord's Story | The Indie Journey"
   description: "A first-hand look at the Illinois five-day notice, process servers and an affidavit of non-service, from a landlord still waiting to get her property back."
