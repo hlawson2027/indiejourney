@@ -1,9 +1,9 @@
 ---
 title: "Rain, Rainbows and Steak Frites: Paris With Tugce"
-excerpt: "Rainy streets, a rainbow over Haussmann's Paris, La Madeleine, art nouveau dining rooms and a lot of laughing. A few days in Paris with my friend Tugce, who I met in the Peruvian desert."
+excerpt: "Flowers at the airport, Harry's New York Bar, rainy streets, a rainbow over Haussmann's Paris, La Madeleine, art nouveau dining rooms and a lot of laughing. A few days in Paris with my friend Tugce, who I met in the Peruvian desert."
 category: src/content/categories/travel.md
 date: 2026-11-27
-draft: true
+draft: false
 cover: "/uploads/paris-img_5072.jpg"
 cover_alt: "Tugce laughing under a rainbow over a Paris street corner"
 seo:
@@ -12,13 +12,23 @@ seo:
 ---
 *Photos: me and Tugce.*
 
-If you've read my [MDS Peru Diaries](/stories/mds-peru-part-1-looking-for-my-limit/), you'll know Tugce. She was my roommate in Lima, my running partner across the Ica Desert, and the friend I promised I'd see again. She lives in France, so [when and why I went], Paris was where we met up.
+If you've read my [MDS Peru Diaries](/stories/mds-peru-part-1-looking-for-my-limit/), you'll know Tugce. She was my roommate in Lima, my running partner across the Ica Desert, and now she's my best friend. So when the two of us decided to do the MDS loops together and meet up with Zuzanna in Switzerland, the plan was simple: I'd fly into Paris, stay with Tugce, and we'd take the train to Geneva together.
 
-## Arriving
+## Flowers at the airport
 
-I landed at Charles de Gaulle and found Tugce on the train into the city, still smiling, still the same.
+I flew in from New York, and Tugce was waiting for me at the airport with flowers. She spotted me in the crowd, lit up, and walked straight towards… the wrong person. We were laughing before we'd even said hello.
+
+It was so good to be back with her. We picked up exactly where we left off in the desert, as if no time had passed at all.
 
 ![Tugce and me on the train at Charles de Gaulle](/uploads/paris-img_5060.jpg)
+
+## Staying at Tugce's
+
+I stayed with Tugce, and it was lovely to finally see where she lives. Her home was lovely, and a little bittersweet too, because she was in the middle of packing it all up to move to Lisbon.
+
+One of my favourite meals of the trip wasn't in a restaurant at all. It was a simple spread in the sunshine at her table: bread, olives and tomatoes, grapes and a big bowl of yoghurt and cucumber.
+
+![A sunny table of bread, olives, tomatoes, grapes and yoghurt](/uploads/paris-img_5101.jpg)
 
 ## Rain, and then a rainbow
 
@@ -50,9 +60,23 @@ La Madeleine looks like a Greek temple dropped into the middle of Paris: a wall 
 
 ## Eating our way around Paris
 
-As a designer, I'm a sucker for a beautiful room, and Paris is full of them. One dinner was in a wood-panelled bar covered in old college pennants [name of the bar]. Another was a brasserie with an art nouveau ceiling of green and gold stained glass, globe lamps and carved plasterwork everywhere [name of the restaurant]. We ordered steak frites, and Tugce gave me her very French "what did you expect?" shrug.
+As a designer, I'm a sucker for a beautiful room, and Paris is full of them.
 
-![A wood-panelled bar covered in college pennants](/uploads/paris-img_5067.jpg)
+### Harry's New York Bar
+
+Since I'd just flown in from New York, Tugce took me to one of the oldest bars in Paris: Harry's New York Bar, at 5 rue Daunou, near the Opéra.
+
+It opened on Thanksgiving Day in 1911. The story goes that an American jockey, Tod Sloan, wanted a proper New York saloon in Paris, so he had the interior of a Manhattan bar taken apart and shipped across the Atlantic. Behind the counter was a Scottish bartender, Harry MacElhone, who later bought the bar and gave it his name.
+
+To help English speakers find it, Harry ran adverts telling visitors to "just tell the taxi driver: Sank Roo Doe Noo", which is how *cinq rue Daunou* sounds if you say it like an American. Hemingway and F. Scott Fitzgerald drank there, George Gershwin is said to have worked on *An American in Paris* at the piano downstairs, and the bar claims to be the birthplace of the Bloody Mary, the French 75 and the Sidecar.
+
+Inside it's dark wood panelling, old college pennants all over the walls and a pressed-tin ceiling. It really does feel like stepping into another century.
+
+![Harry's New York Bar, covered in college pennants](/uploads/paris-img_5067.jpg)
+
+### Bouillon Julien
+
+Another day we went to Bouillon Julien, one of Paris's traditional *bouillons*, which are famous for classic French food at very low prices. It opened in 1906, and the room is pure art nouveau: celadon green walls, stained-glass ceilings, painted panels, mirrors and globe lamps everywhere. You're eating cheap steak frites in one of the most beautiful dining rooms I've ever seen. Tugce gave me her very French "what did you expect?" shrug.
 
 ![Tugce with our steak frites](/uploads/paris-img_5115.jpg)
 
@@ -64,13 +88,9 @@ There were cocktails too, and iced coffees in a little pink café when the sun c
 
 ![Iced coffee break](/uploads/paris-img_5112.jpg)
 
-And one of my favourite meals wasn't in a restaurant at all: a simple spread in the sunshine with bread, olives and tomatoes, grapes and a big bowl of yoghurt and cucumber. [Where this was]
-
-![A sunny table of bread, olives, tomatoes, grapes and yoghurt](/uploads/paris-img_5101.jpg)
-
 ## The train
 
-We finished with a train ride through the green French countryside, coffee in hand, Tugce scrolling and me watching the trees blur past. [Where you were going]
+Then it was time to leave Paris. We took the train to Geneva to meet Zuzanna, coffee in hand, Tugce scrolling and me watching the green French countryside blur past. The three of us back together, and a new MDS adventure ahead. That's a story for another post.
 
 ![Tugce on the train, coffee on the table](/uploads/paris-img_5121.jpg)
 
@@ -78,4 +98,4 @@ We finished with a train ride through the green French countryside, coffee in ha
 
 When I left Peru, I wondered whether I'd ever see these people again. Walking around Paris with Tugce, soaked one minute and under a rainbow the next, felt like proof that the friendships you make when you're pushed to your limit are the ones that last.
 
-[Add anything you'd like to finish with: your favourite moment, or a tip for anyone visiting Paris.]
+And my Paris tip? Don't let the rain put you off. Keep walking. Sometimes there's a rainbow waiting at the end of the street.
