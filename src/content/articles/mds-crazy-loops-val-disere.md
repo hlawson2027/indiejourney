@@ -1,0 +1,131 @@
+---
+title: "Burgers, a Fake Proposal and 50 km in the Alps: My MDS Crazy Loops Val d'Isère"
+excerpt: "A girls' road trip to Val d'Isère, a freezing night in the yellow tents, a 24-hour race that didn't go to plan, and my fastest 50K ever. MDS Crazy Loops with Tugce and Zuzanna."
+category: src/content/categories/running-adventures.md
+date: 2026-11-27
+draft: true
+cover: "/uploads/loops-img_5226.jpg"
+cover_alt: "Tugce and me grinning at the start of MDS Crazy Loops Val d'Isère"
+seo:
+  title: "MDS Crazy Loops Val d'Isère: My 24-Hour Race in the Alps | The Indie Journey"
+  description: "What MDS Crazy Loops is like: a road trip from Geneva, a cold night in the bivouac at altitude, a 24-hour race that didn't go to plan, and 50 km of Alpine loops."
+---
+*Photos: me and Tugce.*
+
+In my [Paris post](/stories/paris-with-tugce/), Tugce and I caught the train to Geneva to meet Zuzanna, my other friend from the [MDS Peru desert](/stories/mds-peru-part-1-looking-for-my-limit/). The three of us were back together, and this time we were heading for the mountains.
+
+## What is MDS Crazy Loops?
+
+Crazy Loops is the Marathon des Sables' mountain event, and the idea is simple. You run the same loop, high up in the Alps, as many times as you can in a set time: 3, 6, 9, 12 or 24 hours. You can sleep in the MDS bivouac, a field of yellow tents, and the event is built to be inclusive. Runners can join the MDS Handi teams as "Helping Runners", pushing and pulling adapted wheelchairs up the trails.
+
+We signed up for the big one: 24 hours.
+
+## A girls' road trip
+
+Zuzanna drove us from Geneva, and it was such a fun girls' road trip. We stopped at a supermarket to stock up, then wound our way up through the valleys, past wooden chalets and cliffs, to Val d'Isère.
+
+![Zuzanna at the wheel](/uploads/loops-img_5139.jpg)
+
+![Stocking up at the supermarket](/uploads/loops-img_5141.jpg)
+
+![Mountain villages on the drive in](/uploads/loops-img_5123.jpg)
+
+![Looking down the valley to Val d'Isère](/uploads/loops-img_5190.jpg)
+
+We arrived, piled out with our race packs, foam mats and bags, and took the lift up to the venue.
+
+![Tugce and me arriving with all our kit](/uploads/loops-img_5180.jpg)
+
+![The Val d'Isère heart above the valley](/uploads/loops-img_5194.jpg)
+
+![Zuzanna and me on the way up](/uploads/loops-img_5199.jpg)
+
+![Chairlifts disappearing into the cloud](/uploads/loops-img_5204.jpg)
+
+## Burgers and a fake proposal
+
+There was a restaurant right at the venue, which was brilliant. We had great burgers and fries, and in the middle of dinner Zuzanna pulled out a ring and "proposed" to Tugce. It was a joke, but Tugce's face was priceless.
+
+![Burgers and fries in the restaurant](/uploads/loops-img_5209.jpg)
+
+![Zuzanna's fake proposal](/uploads/loops-img_5212.jpg)
+
+## The coldest night
+
+Our tents were waiting, a sea of yellow MDS domes under a moody sky. That night was really cold, and a lot of people couldn't sleep. Tugce didn't sleep at all.
+
+Me? I passed out. I stripped off, slept brilliantly, and woke up sweating. I found out later that sleeping in just your underwear inside a good sleeping bag lets your body heat circulate, so you stay warmer. Everyone else was piling on more layers, and there I was, nearly naked and toasty.
+
+![The yellow MDS bivouac under a stormy sky](/uploads/loops-img_5207.jpg)
+
+![Bundled up in the tent](/uploads/loops-img_5214.jpg)
+
+In the morning the sun came out, the camp dog came out to say hello, and it was race day.
+
+![Zuzanna and me on race morning](/uploads/loops-img_5215.jpg)
+
+![A camp dog peeking out of a yellow tent](/uploads/loops-img_5218.jpg)
+
+![The bivouac in the morning sun](/uploads/loops-img_5219.jpg)
+
+## A race that didn't go to plan
+
+![Ready to go](/uploads/loops-img_5224.jpg)
+
+![Under the MDS Crazy Loops start arch](/uploads/loops-img_5225.jpg)
+
+![Tugce and me at the start](/uploads/loops-img_5226.jpg)
+
+We'd planned to run together, but we lost each other right at the start. Zuzanna is fast, so she was ahead, and when I looked back I couldn't find Tugce. I carried on, hoping I'd find her straight away. It didn't go to plan.
+
+So I enjoyed the sights. And what sights: switchback roads, glaciers, chairlifts swinging overhead, and a goat with a bell and the most magnificent horns posing for photos.
+
+![Switchbacks and peaks from the course](/uploads/loops-img_5228.jpg)
+
+![An MDS Handi team pushing a runner up the trail](/uploads/loops-img_5230.jpg)
+
+![The climb across the grass](/uploads/loops-img_5237.jpg)
+
+![A danger sign above the switchbacks](/uploads/loops-img_5240.jpg)
+
+![Running under the chairlift](/uploads/loops-img_5283.jpg)
+
+![My new friend with a bell and impressive horns](/uploads/loops-img_5293.jpg)
+
+![Sheep grazing above the valley](/uploads/loops-img_5301.jpg)
+
+While I was looping, I was messaging Tugce, and found out she wasn't doing well. We'd barely slept, and it had hit her badly.
+
+After my fifth loop I finally caught up with her. We had a great loop together, chatting and taking in the views. Then Zuzanna joined us for a loop, and then Tugce and I carried on together.
+
+![The trail stretching into the mountains](/uploads/loops-img_5264.jpg)
+
+![Looking down the valley](/uploads/loops-img_5278.jpg)
+
+We went back to the tents for a rest, then headed out again. That's when I noticed Tugce really wasn't doing great. The lack of sleep had taken its toll.
+
+It was time to call it a night. It was so cold that we slept in the restaurant, along with plenty of other runners who'd had the same idea.
+
+![A huge flock of sheep moving past the tents](/uploads/loops-img_5310.jpg)
+
+[What happened the next morning? Did you go back out, or was that the end of your race? Add how many loops you did, too.]
+
+> **My MDS Crazy Loops in numbers (August 22, 2026)**
+>
+> - **Start:** 10:32 a.m., Val d'Isère
+> - **Distance:** 50.32 km
+> - **Moving time:** 12 hours 54 minutes
+> - **Climbing:** 1,419 m, all at over 2,300 m altitude
+> - **Average pace:** 15:24 per km (13:48 grade-adjusted)
+> - **Calories burned:** 2,963
+> - **Bonus:** Strava called it my fastest 50K ever.
+
+![My MDS Crazy Loops route and stats](/uploads/loops-img_8525.jpg)
+
+## Not the race I planned, but the one I needed
+
+![Tugce and me celebrating in the Val d'Isère deckchairs](/uploads/loops-img_5316.jpg)
+
+I didn't run for 24 hours. But I ran 50 km in the Alps, looked after my best friend when she needed it, and laughed more than I have in a long time. Some races are about the finish. This one was about the people.
+
+*Want to know what I carry for events like this? See [What I Packed for the MDS 120 Peru](/stories/mds-peru-what-i-packed/).*
