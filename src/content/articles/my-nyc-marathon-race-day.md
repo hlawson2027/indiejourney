@@ -1,6 +1,6 @@
 ---
 title: "My NYC Marathon: A Late Start, Another Hot Day and a Long Walk to Penn"
-excerpt: "Watching the start from bed, a bagel in the start village, the Verrazzano Bridge, that foot pain again, finishing in the dark, and why I'm glad I didn't check a bag. My 2026 TCS New York City Marathon."
+excerpt: "A personal best in the heat. Watching the start from bed, a bagel in the start village, the Verrazzano Bridge, that foot pain again, finishing in the dark, and why I'm glad I didn't check a bag. My 2026 TCS New York City Marathon."
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
@@ -71,6 +71,22 @@ By the time I reached the finish, it was dark. I got my medal and my orange ponc
 ![My 2026 NYC Marathon medal](/uploads/nyc-2026-img_8136.jpg)
 
 ![A sea of orange ponchos leaving the finish in the dark](/uploads/nyc-2026-img_8139.jpg)
+
+And despite the heat and that foot, it was my fastest marathon ever, nearly 11 minutes quicker than my previous best.
+
+> **My NYC Marathon in numbers (November 1, 2026)**
+>
+> - **Start:** 11:34 a.m., Staten Island
+> - **Distance:** 42.39 km on my watch
+> - **Moving time:** 6 hours 4 minutes
+> - **Average pace:** 8:35 per km
+> - **Climbing:** 275 m (all those bridges)
+> - **Average heart rate:** 141 bpm
+> - **Calories burned:** 2,391
+> - **Personal best:** my fastest marathon ever, by 10 minutes 57 seconds
+> - **My note on Strava:** "2 marathons in a month is a killer! Looking forward to chilling"
+
+![My NYC Marathon route and stats](/uploads/nyc-2026-img_8524.jpg)
 
 ## The bag-check rule to watch out for
 
