@@ -110,7 +110,7 @@ It was time to call it a night. It was so cold that we slept in the restaurant, 
 
 We didn't go back out the next morning. That was the end of our race: around 12 or 13 loops for me, though I've honestly lost count. Once the event was over, we found a couple of deckchairs in the sun and chilled with a drink.
 
-And the best news of the weekend? Zuzanna came third! We were so proud of her.
+And the best news of the weekend? Zuzanna came third in the women's 24-hour race! Tugce and I were so, so proud of her. While we were sleeping in the restaurant, she was still out there looping through the night.
 
 > **My MDS Crazy Loops in numbers (August 22, 2026)**
 >
