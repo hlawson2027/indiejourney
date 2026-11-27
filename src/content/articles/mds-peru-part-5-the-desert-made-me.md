@@ -90,8 +90,6 @@ It was truly a wonderful feeling, completing the journey and doing it with my ne
 
 ![My stage three route along the Paracas coast](/uploads/mds-peru-img_8520.jpg)
 
-![My stage three elevation profile](/uploads/mds-peru-img_8521.jpg)
-
 ## Did I find my limit?
 
 I went to Peru looking for my limit and wondering if I'd meet a fear I hadn't found yet. My feet found their limit, that's for sure. But I kept moving.
