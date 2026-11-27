@@ -21,7 +21,14 @@ const used = new Set([lead?.id]);
 let side = home.side_stories.map((id) => byId.get(id)).filter((a) => a && !used.has(a.id)) as typeof articles;
 if (side.length < 2) side = [...side, ...articles.filter((a) => !used.has(a.id) && !side.includes(a))].slice(0, 2);
 side.forEach((a) => used.add(a.id));
-const latest = articles.filter((a) => !used.has(a.id)).slice(0, home.latest_count);
+// The Latest: newest first, but no more than one story per category until every category has had a turn,
+// so a multi-part series doesn't fill the whole list.
+const pool = articles.filter((a) => !used.has(a.id));
+const seenCats = new Set<string>();
+const firstPass = pool.filter((a) => !seenCats.has(a.data.category) && (seenCats.add(a.data.category), true));
+const latest = [...firstPass, ...pool.filter((a) => !firstPass.includes(a))]
+  .slice(0, home.latest_count)
+  .sort((a, b) => pool.indexOf(a) - pool.indexOf(b));
 
 const lookbooks = await getLookbooks();
 const allProducts = await getProducts();
