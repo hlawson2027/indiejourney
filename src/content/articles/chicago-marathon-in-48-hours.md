@@ -67,7 +67,8 @@ In the end I took an Uber instead of the train, got dropped off a little way fro
 >
 > - Organisers put the race on a **yellow alert**, their warning for "less-than-ideal" conditions, which means slow down and be ready for things to get worse.
 > - The forecast high was about **73°F (23°C)**. A normal October 11 in Chicago tops out around 64°F, and ideal marathon weather is closer to 50°F.
-> - It was around 60°F at the start and kept climbing all morning, with full sun and barely any shade.
+> - It was around 60°F at the start and kept climbing all morning.
+- The number on the forecast doesn't tell the whole story. With the humidity, full sun, almost no shade and heat coming back up off the road, it felt far hotter than 73°F out on the course.
 
 ![Grant Park on race morning with the Chicago skyline](/uploads/chicago-2026-img_7288.jpg)
 
@@ -87,7 +88,7 @@ Later in the race I got chatting to a man who'd had exactly the same horrific fo
 
 ## The heat
 
-The first 10 km were horrible. The heat was unbelievable. People were throwing up around me, and a medic team ran past. That was my wake-up call: slow down, or I'll be the one who needs a medic.
+The first 10 km were horrible. The heat was unbelievable, and it wasn't just the temperature. The air was thick and humid, so my sweat wasn't cooling me down. There was barely any shade, the sun was beating down, and the tarmac was soaking it all up and throwing it back at us. It felt like running between a grill and an oven. People were throwing up around me, and a medic team ran past. That was my wake-up call: slow down, or I'll be the one who needs a medic.
 
 The crowds were brilliant the whole way. Firefighters came out and hosed us down, and people were handing out ice, which was amazing.
 
