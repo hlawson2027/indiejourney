@@ -12,7 +12,7 @@ seo:
 ---
 *Photos: me and Tugce.*
 
-If you've read my [MDS Peru Diaries](/stories/mds-peru-part-1-looking-for-my-limit/), you'll know Tugce. She was my roommate in Lima, my running partner across the Ica Desert, and now she's my best friend. So when the two of us decided to do the MDS loops together and meet up with Zuzanna in Switzerland, the plan was simple: I'd fly into Paris, stay with Tugce, and we'd take the train to Geneva together.
+If you've read my [MDS Peru Diaries](/stories/mds-peru-part-1-looking-for-my-limit/), you'll know Tugce. She was my roommate in Lima, my running partner across the Ica Desert, and now she's my best friend. So when the two of us decided to run MDS Crazy Loops in Val d'Isère together and meet up with Zuzanna in Switzerland, the plan was simple: I'd fly into Paris, stay with Tugce, and we'd take the train to Geneva together.
 
 ## Flowers at the airport
 
@@ -90,7 +90,7 @@ There were cocktails too, and iced coffees in a little pink café when the sun c
 
 ## The train
 
-Then it was time to leave Paris. We took the train to Geneva to meet Zuzanna, coffee in hand, Tugce scrolling and me watching the green French countryside blur past. The three of us back together, and a new MDS adventure ahead. That's a story for another post.
+Then it was time to leave Paris. We took the train to Geneva to meet Zuzanna, coffee in hand, Tugce scrolling and me watching the green French countryside blur past. The three of us back together, and MDS Crazy Loops in Val d'Isère ahead. That's a story for the next post.
 
 ![Tugce on the train, coffee on the table](/uploads/paris-img_5121.jpg)
 
