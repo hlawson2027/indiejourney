@@ -3,7 +3,7 @@ title: "Italy Was My First Choice. Here's Why Spain Pulled Ahead"
 excerpt: "I was leaning towards Italy, until my questions about visas, taxes, my Amazon videos and moving together with Gavin kept pointing me back to Spain."
 category: src/content/categories/spain-diaries.md
 date: 2026-11-27
-draft: true
+draft: false
 cover: "/uploads/story-italy-or-spain.jpg"
 cover_alt: "Italy was my first choice: here's why Spain pulled ahead"
 seo:
