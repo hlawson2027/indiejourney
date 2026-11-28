@@ -17,6 +17,8 @@ Here's my plan, plus the few pieces that do the heavy lifting on the table.
 
 ![Walmart holiday hosting mood board: bamboo charcuterie board, gold candlesticks, striped napkins, tartan tablecloth, cake stand, stemless wine glasses, glass drinks dispenser, jute runner and white platter](/uploads/holiday-hosting-walmart-board.jpg)
 
+> **Free printable:** get my [Christmas Hosting Planner](/christmas-hosting-planner/), with a countdown checklist, guest list, menu, shopping list and a timeline for the day.
+
 ## 1. Decide the menu, then cut it by a third
 
 The biggest cause of hosting stress is doing too much. Pick one showstopper, then make everything else simple or bought. Nobody remembers the fourth side dish; they remember that you were relaxed and fun.
