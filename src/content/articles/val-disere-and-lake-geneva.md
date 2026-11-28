@@ -2,6 +2,8 @@
 title: "A Few Hours in Val d'Isère, Then Lake Geneva"
 excerpt: "Our last day in the Alps: wandering Val d'Isère in summer, chalets, quiet ski lifts and mountain roads, then down to the turquoise water of Lake Geneva."
 category: src/content/categories/running-adventures.md
+also_in:
+  - src/content/categories/travel.md
 date: 2026-11-27
 draft: false
 series: src/content/series/paris-to-the-alps.md

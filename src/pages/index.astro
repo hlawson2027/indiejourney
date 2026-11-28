@@ -8,7 +8,7 @@ import Newsletter from '../components/Newsletter.astro';
 import { home, settings } from '../lib/settings';
 import {
   getArticles, getLookbooks, getProducts, getProductMap, getCategoryMap, getBooks, getStores, bookHref, bookHasPage,
-  articleUrl, lookbookUrl, categoryUrl, pickProducts, retailerSlug, getSeriesMap, collapseSeries, seriesUrl,
+  articleUrl, lookbookUrl, categoryUrl, pickProducts, retailerSlug, getSeriesMap, collapseSeries, seriesUrl, inCategory,
 } from '../lib/content';
 const seriesMap = await getSeriesMap();
 
@@ -77,7 +77,7 @@ const leadLd = {
     {home.sections.map((s) => {
       if (s.type === 'category_row') {
         const cat = catMap.get(s.category);
-        const items = collapseSeries(articles.filter((a) => a.data.category === s.category && !used.has(a.id)), seriesMap).slice(0, Number(s.count || 4));
+        const items = collapseSeries(articles.filter((a) => inCategory(a, s.category) && !used.has(a.id)), seriesMap, s.category).slice(0, Number(s.count || 4));
         if (!cat || items.length === 0) return null;
         return (
           <section class="section">
@@ -135,7 +135,7 @@ const leadLd = {
         return (
           <section class="section cols2">
             {sides.map((cat) => {
-              const items = articles.filter((a) => a.data.category === cat!.id).slice(0, 3);
+              const items = articles.filter((a) => inCategory(a, cat!.id)).slice(0, 3);
               return (
                 <div>
                   <div class="sec"><h2>{cat!.data.title}</h2><span class="rule"></span><a class="more" href={categoryUrl(cat!.id)}>See all</a></div>

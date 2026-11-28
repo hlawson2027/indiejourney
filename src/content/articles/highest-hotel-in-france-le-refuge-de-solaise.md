@@ -2,6 +2,8 @@
 title: "Recovering at the Highest Hotel in France, and a Sunrise Run"
 excerpt: "After MDS Crazy Loops, we swapped the yellow tents for Le Refuge de Solaise, the highest hotel in France, then Zuzanna and I went for a sunrise run to a mountain lake."
 category: src/content/categories/running-adventures.md
+also_in:
+  - src/content/categories/travel.md
 date: 2026-11-27
 draft: false
 series: src/content/series/paris-to-the-alps.md

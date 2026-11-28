@@ -66,6 +66,15 @@ content:
           collection: categories
           value: "{path}"
           label: "{title}"
+      - name: also_in
+        label: Also show in (optional)
+        type: reference
+        list: true
+        description: Show this story on other category pages too, without copying it.
+        options:
+          collection: categories
+          value: "{path}"
+          label: "{title}"
       - name: series
         label: Series (optional)
         type: reference

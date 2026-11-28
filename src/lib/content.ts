@@ -90,16 +90,22 @@ export function seriesParts(articles: CollectionEntry<'articles'>[], id: string)
 }
 
 /** Replace every article in a series with one card for the whole series, at the spot of its newest part. */
-export function collapseSeries(list: CollectionEntry<'articles'>[], seriesMap: Map<string, CollectionEntry<'series'>>) {
+/** True when an article belongs on a category's pages: its own category, or one it is also listed in. */
+export const inCategory = (a: CollectionEntry<'articles'>, id: string) =>
+  a.data.category === id || (a.data.also_in ?? []).includes(id);
+
+export function collapseSeries(list: CollectionEntry<'articles'>[], seriesMap: Map<string, CollectionEntry<'series'>>, categoryId?: string) {
+  // Stories only "also listed" in this category always show as themselves; only a category's own stories group into a series card.
+  const own = (a: CollectionEntry<'articles'>) => !categoryId || a.data.category === categoryId;
   const seen = new Set<string>();
   const out: ({ kind: 'article'; article: CollectionEntry<'articles'> } | { kind: 'series'; series: CollectionEntry<'series'>; count: number })[] = [];
   for (const a of list) {
     const sid = a.data.series;
     const s = sid ? seriesMap.get(sid) : undefined;
-    const count = s ? list.filter((x) => x.data.series === s.id).length : 0;
+    const count = s ? list.filter((x) => x.data.series === s.id && own(x)).length : 0;
     // A series only becomes one card when two or more of its parts are in this list;
     // a lone part (e.g. the Paris story on the Travel page) shows as itself.
-    if (!s || count < 2) { out.push({ kind: 'article', article: a }); continue; }
+    if (!s || count < 2 || !own(a)) { out.push({ kind: 'article', article: a }); continue; }
     if (seen.has(s.id)) continue;
     seen.add(s.id);
     out.push({ kind: 'series', series: s, count });

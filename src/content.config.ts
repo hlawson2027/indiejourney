@@ -27,6 +27,7 @@ const articles = defineCollection({
     title: z.string(),
     excerpt: z.string().optional().nullable(),
     category: ref,
+    also_in: z.array(ref).optional().nullable(),
     date: z.coerce.date(),
     updated: z.coerce.date().optional().nullable(),
     draft: z.boolean().optional().default(false),

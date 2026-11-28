@@ -8,7 +8,7 @@ import Img from '../../components/Img.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import SeriesCard from '../../components/SeriesCard.astro';
 import Newsletter from '../../components/Newsletter.astro';
-import { getArticles, getCategories, getSeriesMap, collapseSeries } from '../../lib/content';
+import { getArticles, getCategories, getSeriesMap, collapseSeries, inCategory } from '../../lib/content';
 import { spainTrackerHtml } from '../../lib/spain-tracker.mjs';
 
 export const getStaticPaths = (async ({ paginate }) => {
@@ -25,8 +25,8 @@ export const getStaticPaths = (async ({ paginate }) => {
   const out: any[] = [];
   for (const c of categories) {
     claim(c.id, 'category');
-    const items = collapseSeries(articles.filter((a) => a.data.category === c.id)
-      .sort((a, b) => Number(b.data.pinned) - Number(a.data.pinned)), seriesMap);
+    const items = collapseSeries(articles.filter((a) => inCategory(a, c.id))
+      .sort((a, b) => Number(b.data.pinned) - Number(a.data.pinned)), seriesMap, c.id);
     out.push(...paginate(items, { params: { section: c.id }, props: { kind: 'category', category: c }, pageSize: 24 }));
   }
   for (const p of pages) {
