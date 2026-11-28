@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Img from './Img.astro';
+import { seriesUrl } from '../lib/content';
+
+interface Props {
+  series: CollectionEntry<'series'>;
+  count: number;
+  ratio?: '45' | '34' | '32' | '11';
+  sizes?: string;
+  showExcerpt?: boolean;
+}
+const { series, count, ratio = '34', sizes, showExcerpt = false } = Astro.props;
+const d = series.data;
+const url = seriesUrl(series.id);
+---
+<article class="card">
+  <a href={url} tabindex="-1" aria-hidden="true"><Img src={d.cover} alt={d.cover_alt || ''} seed={d.title} ratio={ratio} sizes={sizes} /></a>
+  <span class="kick">Series · {count} stories</span>
+  <h3 class="hed"><a href={url}>{d.title}</a></h3>
+  {showExcerpt && d.description && <p class="dek">{d.description}</p>}
+</article>

@@ -4,6 +4,8 @@ excerpt: "The final part of my MDS Peru Diaries: a coach stuck in the sand, one 
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
+series: src/content/series/mds-peru-diaries.md
+series_part: 6
 cover: "/uploads/mds-peru-img_3974.jpg"
 cover_alt: "Runners pushing the coach stuck in the desert sand"
 seo:

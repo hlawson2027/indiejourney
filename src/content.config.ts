@@ -37,6 +37,8 @@ const articles = defineCollection({
     products: refs,
     featured: z.boolean().optional().default(false),
     pinned: z.boolean().optional().default(false),
+    series: ref.optional().nullable(),
+    series_part: z.coerce.number().optional().nullable(),
     seo,
   }),
 });
@@ -125,6 +127,16 @@ const categories = defineCollection({
   }),
 });
 
+const series = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/series' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional().nullable(),
+    cover: img,
+    cover_alt: z.string().optional().nullable(),
+  }),
+});
+
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
@@ -148,4 +160,4 @@ const idealists = defineCollection({
   }),
 });
 
-export const collections = { idealists, articles, lookbooks, products, books, stores, categories, pages };
+export const collections = { idealists, articles, lookbooks, products, books, stores, categories, pages, series };

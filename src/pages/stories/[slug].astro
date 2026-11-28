@@ -7,7 +7,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import Newsletter from '../../components/Newsletter.astro';
 import { settings } from '../../lib/settings';
 import { shareImage } from '../../lib/images';
-import { getArticles, getCategoryMap, getProductMap, pickProducts, categoryUrl, formatDate, articleUrl } from '../../lib/content';
+import { getArticles, getCategoryMap, getProductMap, pickProducts, categoryUrl, formatDate, articleUrl, getSeriesMap, seriesParts, seriesUrl } from '../../lib/content';
 import { youtubeHtml } from '../../plugins/remark-indie.mjs';
 
 export async function getStaticPaths() {
@@ -22,7 +22,9 @@ const products = pickProducts(d.products, await getProductMap());
 const hasShortcodeProducts = /\[\[\s*product\s*:/i.test(article.body || '');
 const hasAffiliate = products.length > 0 || hasShortcodeProducts;
 const videoId = d.video?.match(/(?:v=|youtu\.be\/|shorts\/|embed\/|live\/)([A-Za-z0-9_-]{11})/)?.[1];
-const related = all.filter((a) => a.id !== article.id && a.data.category === d.category).slice(0, 3);
+const seriesEntry = d.series ? (await getSeriesMap()).get(d.series) : undefined;
+const seriesList = seriesEntry ? seriesParts(all, seriesEntry.id) : [];
+const related = all.filter((a) => a.id !== article.id && a.data.category === d.category && !(d.series && a.data.series === d.series)).slice(0, 3);
 const url = new URL(articleUrl(article), Astro.site).href;
 const pinPath = await shareImage(d.pin_image || d.cover, 1000);
 const pinUrl = pinPath ? new URL(pinPath, Astro.site).href : '';
@@ -73,6 +75,17 @@ const ld = {
         {videoId && <Fragment set:html={youtubeHtml(videoId, d.title)} />}
         <Content />
       </div>
+      {seriesEntry && (
+        <nav class="series-box" aria-label={`More from ${seriesEntry.data.title}`}>
+          <span class="kick">Part of a series</span>
+          <h2 class="hed"><a href={seriesUrl(seriesEntry.id)}>{seriesEntry.data.title}</a></h2>
+          <ol>
+            {seriesList.map((a) => (
+              <li>{a.id === article.id ? <strong aria-current="page">{a.data.title}</strong> : <a href={articleUrl(a)}>{a.data.title}</a>}</li>
+            ))}
+          </ol>
+        </nav>
+      )}
       {d.pin_image && (
         <div style="display:none" aria-hidden="true"><Img src={d.pin_image} alt={d.title} ratio="23" widths={[600]} /></div>
       )}

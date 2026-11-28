@@ -4,6 +4,8 @@ excerpt: "Part 2 of my MDS Peru Diaries: flying to Lima with a hangover, the bac
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
+series: src/content/series/mds-peru-diaries.md
+series_part: 2
 cover: "/uploads/mds-peru-img_3211.jpg"
 cover_alt: "Tugce's and my MDS 120 Peru race bibs"
 seo:

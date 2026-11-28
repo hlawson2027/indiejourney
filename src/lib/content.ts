@@ -74,3 +74,32 @@ export function formatDate(d: Date) {
 export function pickProducts(ids: string[], map: Map<string, CollectionEntry<'products'>>) {
   return ids.map((id) => map.get(id)).filter((p): p is CollectionEntry<'products'> => !!p);
 }
+
+export const seriesUrl = (id: string) => `/series/${id}/`;
+
+export async function getSeriesMap() {
+  const all = await getCollection('series');
+  return new Map(all.map((s) => [s.id, s]));
+}
+
+/** A series' published parts, in part order. */
+export function seriesParts(articles: CollectionEntry<'articles'>[], id: string) {
+  return articles
+    .filter((a) => a.data.series === id)
+    .sort((a, b) => (a.data.series_part ?? 99) - (b.data.series_part ?? 99) || +a.data.date - +b.data.date);
+}
+
+/** Replace every article in a series with one card for the whole series, at the spot of its newest part. */
+export function collapseSeries(list: CollectionEntry<'articles'>[], seriesMap: Map<string, CollectionEntry<'series'>>) {
+  const seen = new Set<string>();
+  const out: ({ kind: 'article'; article: CollectionEntry<'articles'> } | { kind: 'series'; series: CollectionEntry<'series'>; count: number })[] = [];
+  for (const a of list) {
+    const sid = a.data.series;
+    const s = sid ? seriesMap.get(sid) : undefined;
+    if (!s) { out.push({ kind: 'article', article: a }); continue; }
+    if (seen.has(s.id)) continue;
+    seen.add(s.id);
+    out.push({ kind: 'series', series: s, count: list.filter((x) => x.data.series === s.id).length });
+  }
+  return out;
+}

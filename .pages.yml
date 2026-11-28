@@ -66,6 +66,18 @@ content:
           collection: categories
           value: "{path}"
           label: "{title}"
+      - name: series
+        label: Series (optional)
+        type: reference
+        description: Part of a multi-part story? Pick the series and it shows as one card on your category pages, with all parts on its own page.
+        options:
+          collection: series
+          value: "{path}"
+          label: "{title}"
+      - name: series_part
+        label: Part number in the series
+        type: number
+        description: 1 for the first part, 2 for the next, and so on.
       - name: excerpt
         label: Summary
         type: text
@@ -302,6 +314,31 @@ content:
         label: Hide this list
         type: boolean
         default: false
+
+  - name: series
+    label: Series
+    type: collection
+    path: src/content/series
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title]
+    fields:
+      - name: title
+        label: Series name
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+      - name: cover
+        label: Cover photo
+        type: image
+      - name: cover_alt
+        label: Cover photo description
+        type: string
 
   - name: categories
     label: Categories

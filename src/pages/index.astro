@@ -2,13 +2,15 @@
 import Base from '../layouts/Base.astro';
 import Img from '../components/Img.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import SeriesCard from '../components/SeriesCard.astro';
 import ProductCard from '../components/ProductCard.astro';
 import Newsletter from '../components/Newsletter.astro';
 import { home, settings } from '../lib/settings';
 import {
   getArticles, getLookbooks, getProducts, getProductMap, getCategoryMap, getBooks, getStores, bookHref, bookHasPage,
-  articleUrl, lookbookUrl, categoryUrl, pickProducts, retailerSlug,
+  articleUrl, lookbookUrl, categoryUrl, pickProducts, retailerSlug, getSeriesMap, collapseSeries, seriesUrl,
 } from '../lib/content';
+const seriesMap = await getSeriesMap();
 
 const articles = await getArticles();
 const catMap = await getCategoryMap();
@@ -23,7 +25,9 @@ if (side.length < 2) side = [...side, ...articles.filter((a) => !used.has(a.id) 
 side.forEach((a) => used.add(a.id));
 // The Latest: newest first, but no more than one story per category until every category has had a turn,
 // so a multi-part series doesn't fill the whole list.
-const pool = articles.filter((a) => !used.has(a.id));
+// Stories from a series already featured above stay out of The Latest; the series has its own page.
+const usedSeries = new Set([lead, ...side].map((a) => a?.data.series).filter(Boolean));
+const pool = articles.filter((a) => !used.has(a.id) && !(a.data.series && usedSeries.has(a.data.series)));
 const seenCats = new Set<string>();
 const firstPass = pool.filter((a) => !seenCats.has(a.data.category) && (seenCats.add(a.data.category), true));
 const latest = [...firstPass, ...pool.filter((a) => !firstPass.includes(a))]
@@ -73,12 +77,14 @@ const leadLd = {
     {home.sections.map((s) => {
       if (s.type === 'category_row') {
         const cat = catMap.get(s.category);
-        const items = articles.filter((a) => a.data.category === s.category && !used.has(a.id)).slice(0, Number(s.count || 4));
+        const items = collapseSeries(articles.filter((a) => a.data.category === s.category && !used.has(a.id)), seriesMap).slice(0, Number(s.count || 4));
         if (!cat || items.length === 0) return null;
         return (
           <section class="section">
             <div class="sec"><h2>{s.title || cat.data.title}</h2><span class="rule"></span><a class="more" href={categoryUrl(cat.id)}>See all</a></div>
-            <div class="grid scroller">{items.map((a) => <ArticleCard article={a} kicker={kicker(a)} sizes="(max-width: 760px) 72vw, 290px" />)}</div>
+            <div class="grid scroller">{items.map((it) => it.kind === 'series'
+              ? <SeriesCard series={it.series} count={it.count} sizes="(max-width: 760px) 72vw, 290px" />
+              : <ArticleCard article={it.article} kicker={kicker(it.article)} sizes="(max-width: 760px) 72vw, 290px" />)}</div>
           </section>
         );
       }

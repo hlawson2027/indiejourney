@@ -4,6 +4,8 @@ excerpt: "Part 5 of my MDS Peru Diaries: a 5am start on wrecked feet, Fleetwood 
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
+series: src/content/series/mds-peru-diaries.md
+series_part: 5
 cover: "/uploads/mds-peru-img_1719.jpg"
 cover_alt: "Four of us with our medals at the MDS 120 Peru finish arch"
 seo:

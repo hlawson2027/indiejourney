@@ -4,6 +4,8 @@ excerpt: "Everything I carried for 4 days and 83 km in Peru's Ica Desert: the pa
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
+series: src/content/series/mds-peru-diaries.md
+series_part: 7
 cover: "/uploads/mds-peru-img_8096.jpg"
 cover_alt: "My packed 20-litre race bag, poles and sleeping bag for the MDS 120 Peru"
 seo:

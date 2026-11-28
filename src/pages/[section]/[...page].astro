@@ -6,15 +6,17 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Img from '../../components/Img.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import SeriesCard from '../../components/SeriesCard.astro';
 import Newsletter from '../../components/Newsletter.astro';
-import { getArticles, getCategories } from '../../lib/content';
+import { getArticles, getCategories, getSeriesMap, collapseSeries } from '../../lib/content';
 import { spainTrackerHtml } from '../../lib/spain-tracker.mjs';
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const RESERVED = ['stories', 'lookbooks', 'shop', 'books', 'stores', 'search', 'uploads', '_astro', 'pagefind', 'rss.xml'];
+  const RESERVED = ['series', 'stories', 'lookbooks', 'shop', 'books', 'stores', 'search', 'uploads', '_astro', 'pagefind', 'rss.xml'];
   const articles = await getArticles();
   const categories = await getCategories();
   const pages = await getCollection('pages');
+  const seriesMap = await getSeriesMap();
   const seen = new Set<string>();
   const claim = (id: string, what: string) => {
     if (RESERVED.includes(id) || seen.has(id)) throw new Error(`The ${what} "${id}" uses a web address that is already taken. Rename it in the dashboard.`);
@@ -23,8 +25,8 @@ export const getStaticPaths = (async ({ paginate }) => {
   const out: any[] = [];
   for (const c of categories) {
     claim(c.id, 'category');
-    const items = articles.filter((a) => a.data.category === c.id)
-      .sort((a, b) => Number(b.data.pinned) - Number(a.data.pinned));
+    const items = collapseSeries(articles.filter((a) => a.data.category === c.id)
+      .sort((a, b) => Number(b.data.pinned) - Number(a.data.pinned)), seriesMap);
     out.push(...paginate(items, { params: { section: c.id }, props: { kind: 'category', category: c }, pageSize: 24 }));
   }
   for (const p of pages) {
@@ -48,7 +50,9 @@ if (props.kind === 'page') Content = (await render(props.entry)).Content;
       {props.category.id === 'spain-diaries' && props.page.currentPage === 1 && <div class="rts-wrap" set:html={spainTrackerHtml()} />}
       {props.page.data.length ? (
         <div class="grid wide">
-          {props.page.data.map((a: any) => <ArticleCard article={a} kicker={a.data.pinned ? `${props.category.data.title} · Start here` : props.category.data.title} showExcerpt sizes="(max-width: 760px) 100vw, 380px" />)}
+          {props.page.data.map((it: any) => it.kind === 'series'
+            ? <SeriesCard series={it.series} count={it.count} showExcerpt sizes="(max-width: 760px) 100vw, 380px" />
+            : <ArticleCard article={it.article} kicker={it.article.data.pinned ? `${props.category.data.title} · Start here` : props.category.data.title} showExcerpt sizes="(max-width: 760px) 100vw, 380px" />)}
         </div>
       ) : (
         <p class="empty">Stories are on their way.</p>

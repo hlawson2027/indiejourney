@@ -245,3 +245,9 @@ main { padding-top: 44px; }
 .prose .tool .tool-kick { font: 600 12px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0; }
 .prose .tool .tool-code { font-size: 16px; }
 .prose .tool a.btn { color: #fff; text-decoration: none; margin-top: 4px; }
+
+/* Series: list of every part, shown at the end of a story in a series */
+.series-box { max-width: 720px; margin: 48px auto 0; padding: 28px 32px; border: 1px solid var(--line); background: var(--tint); }
+.series-box .hed { margin: 6px 0 14px; font-size: 1.5rem; }
+.series-box ol { margin: 0; padding-left: 1.3em; line-height: 1.9; }
+.series-box strong { font-weight: 600; }

@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { getArticles, seriesParts } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const articles = await getArticles();
+  const all = await getCollection('series');
+  return all
+    .map((s) => ({ params: { slug: s.id }, props: { series: s, parts: seriesParts(articles, s.id) } }))
+    .filter((p) => p.props.parts.length > 0);
+}) satisfies GetStaticPaths;
+
+const { series, parts } = Astro.props;
+const d = series.data;
+const label = (a: (typeof parts)[number]) => (a.data.series_part && a.data.series_part <= 6 && !/packed/i.test(a.data.title) ? `Part ${a.data.series_part}` : 'Extra');
+---
+<Base title={d.title} description={d.description || undefined}>
+  <div class="wrap">
+    <header class="pagehead">
+      <span class="kick">A series · {parts.length} stories</span>
+      <h1 class="hed">{d.title}</h1>
+      {d.description && <p class="dek">{d.description}</p>}
+    </header>
+    {d.cover && <div style="max-width:1000px;margin:0 auto 48px"><Img src={d.cover} alt={d.cover_alt || ''} ratio="32" eager widths={[480, 720, 1000]} sizes="(max-width: 1000px) 100vw, 1000px" /></div>}
+    <div class="grid wide">
+      {parts.map((a) => <ArticleCard article={a} kicker={label(a)} showExcerpt sizes="(max-width: 760px) 100vw, 380px" />)}
+    </div>
+    <Newsletter />
+  </div>
+</Base>

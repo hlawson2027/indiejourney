@@ -4,6 +4,8 @@ excerpt: "Part 3 of my MDS Peru Diaries: the mandatory kit check, the long bus r
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
+series: src/content/series/mds-peru-diaries.md
+series_part: 3
 cover: "/uploads/mds-peru-img_8191.jpg"
 cover_alt: "Tugce and me at the MDS 120 Peru start line"
 seo:

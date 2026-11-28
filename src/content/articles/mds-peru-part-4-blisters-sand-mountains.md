@@ -4,6 +4,8 @@ excerpt: "Part 4 of my MDS Peru Diaries: cooking in the dark, a sand mountain th
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
+series: src/content/series/mds-peru-diaries.md
+series_part: 4
 cover: "/uploads/mds-peru-img_8282.jpg"
 cover_alt: "A silver door standing alone in the dunes"
 seo:
