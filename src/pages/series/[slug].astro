@@ -17,7 +17,7 @@ export const getStaticPaths = (async () => {
 
 const { series, parts } = Astro.props;
 const d = series.data;
-const label = (a: (typeof parts)[number]) => (a.data.series_part && a.data.series_part <= 6 && !/packed/i.test(a.data.title) ? `Part ${a.data.series_part}` : 'Extra');
+const label = (a: (typeof parts)[number]) => (/packed/i.test(a.data.title) ? 'Extra' : a.data.series_part ? `Part ${a.data.series_part}` : '');
 ---
 <Base title={d.title} description={d.description || undefined}>
   <div class="wrap">

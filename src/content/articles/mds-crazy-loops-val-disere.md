@@ -4,6 +4,8 @@ excerpt: "A girls' road trip to Val d'Isère, a freezing night in the yellow ten
 category: src/content/categories/running-adventures.md
 date: 2026-11-27
 draft: false
+series: src/content/series/paris-to-the-alps.md
+series_part: 2
 cover: "/uploads/loops-img_5226.jpg"
 cover_alt: "Tugce and me grinning at the start of MDS Crazy Loops Val d'Isère"
 seo:

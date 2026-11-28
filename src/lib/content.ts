@@ -96,10 +96,13 @@ export function collapseSeries(list: CollectionEntry<'articles'>[], seriesMap: M
   for (const a of list) {
     const sid = a.data.series;
     const s = sid ? seriesMap.get(sid) : undefined;
-    if (!s) { out.push({ kind: 'article', article: a }); continue; }
+    const count = s ? list.filter((x) => x.data.series === s.id).length : 0;
+    // A series only becomes one card when two or more of its parts are in this list;
+    // a lone part (e.g. the Paris story on the Travel page) shows as itself.
+    if (!s || count < 2) { out.push({ kind: 'article', article: a }); continue; }
     if (seen.has(s.id)) continue;
     seen.add(s.id);
-    out.push({ kind: 'series', series: s, count: list.filter((x) => x.data.series === s.id).length });
+    out.push({ kind: 'series', series: s, count });
   }
   return out;
 }

@@ -4,6 +4,8 @@ excerpt: "Flowers at the airport, Harry's New York Bar, rainy streets, a rainbow
 category: src/content/categories/travel.md
 date: 2026-11-27
 draft: false
+series: src/content/series/paris-to-the-alps.md
+series_part: 1
 cover: "/uploads/paris-img_5072.jpg"
 cover_alt: "Tugce laughing under a rainbow over a Paris street corner"
 seo:
